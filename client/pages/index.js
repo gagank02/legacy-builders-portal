@@ -1,9 +1,11 @@
 import Head from 'next/head'
+import Navbar from '../components/Navbar'
 import Sidebar from '../components/Sidebar.js'
 
 export default function Home() {
   return (
       <>
+        <Navbar />
         <div className='home-content'>
           <h2>Content</h2>
         </div>
