@@ -71,7 +71,7 @@ const useStyles = makeStyles({
         flexGrow: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        paddingLeft: '10rem',
+        paddingRight: '20rem',
 
         ['@media (max-width: 1000px)']: {
             display: 'none',

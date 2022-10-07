@@ -9,6 +9,21 @@ export default function Navbar() {
     const logo = '/assets/raf_logo.png'
     const logo_words = '/assets/raf_logo_words.png'
 
+    const pagesData = [
+        {
+            label: 'Learn',
+            href: '/learn'
+        },
+        {
+            label: 'Forum',
+            href: '/forum'
+        },
+        {
+            label: 'Resources',
+            href: '/resources'
+        },
+    ];
+
     const [needsMenu, setNeedsMenu] = useState(null);
 
     const handleOpenMenu = (event) => {
@@ -31,7 +46,7 @@ export default function Navbar() {
             <AppBar className={classes.header}>
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
-                        <IconButton
+                        {/* <IconButton
                             size="large"
                             aria-label="account of current user"
                             aria-controls="menu-appbar"
@@ -41,7 +56,7 @@ export default function Navbar() {
 
                         >
                             <MenuIcon />
-                        </IconButton>
+                        </IconButton> */}
 
                         <Box className={classes.logoBox}>
                             <Link href="/" passHref>
@@ -54,6 +69,18 @@ export default function Navbar() {
                                     <img src={logo_words} alt='logo' className={classes.wordsLogo} />
                                 </a>
                             </Link>
+                        </Box>
+
+                        <Box className={classes.pages}>
+                            {pagesData.map(({ label, href }) => (
+                                <Link key={label} href={href} passHref>
+                                    <a rel="noreferrer" className={currentPage === label.toLowerCase() ? classes.activePage : classes.page}>
+                                        <Typography>
+                                            {label}
+                                        </Typography>
+                                    </a>
+                                </Link>
+                            ))}
                         </Box>
 
                         <Box className={classes.util}>
