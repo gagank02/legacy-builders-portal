@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
+const contentsRoutes = require("./routes/contents");
 const { NotFoundError } = require("./utils/errors.js");
 const app = express();
 
@@ -12,6 +13,8 @@ app.use(morgan("tiny"));
 app.get("/", function (req, res) {
     return res.status(200).json({ ping: "pong" });
 });
+
+app.use("/contents", contentsRoutes);
 
 /* Handle all 404 errors that weren't matched by a route */
 app.use((req, res, next) => {
