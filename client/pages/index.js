@@ -1,5 +1,9 @@
 import Head from 'next/head'
 import Sidebar from '../components/Sidebar.js'
+import MuiCard from '../components/MuiCard.jsx'
+import MuiTable from '../components/MuiTable.jsx'
+
+
 
 export default function Home() {
   return (
@@ -7,23 +11,20 @@ export default function Home() {
         <div className='home-content'>
           <h2>Content</h2>
         </div>
-
-        <div className='home-lessons'>
-            <h2>Lessons</h2>
-            <ul>
-              <li>Communication</li>
-              <li>Financial Literacy</li>
-              <li>Conflict resolution</li>
-              <li>Leadership</li>
-              <li>Project Management</li>
-              <li>Emotional Intelligence</li>
-            </ul>
+        <div className = 'parent'>
+          <div className = 'child'>
+            <MuiTable/>
           </div>
-
-          <div className='home-progress'>
-            <span>70%</span>
+          <div className = 'child'>
+            <MuiCard header = "Your Progress" percent = "70%" />
+            <br></br>
+            <MuiCard header = "Your Next Webinar" percent = "https://urllink.com" />
           </div>
+        </div>
+          
+          
         <div> 
+          <br></br>
           <Sidebar />
         </div>
       </>
