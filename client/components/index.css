@@ -1,0 +1,16 @@
+.home-content {
+    position: relative;
+    width: 1105px;
+    height: 454px;  
+    border: 1px solid black;
+}
+
+.home-content h2{
+    padding-left: 552px;
+    padding-top: 227px;
+}
+
+.home-lessons {
+    border: 1px solid black;
+}
+
