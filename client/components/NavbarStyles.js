@@ -5,7 +5,7 @@ const mobile = '420px';
 
 const useStyles = makeStyles({
     header: {
-        position: 'fixed',
+        position: 'static',
         width: '100%',
         zIndex: 5,
 

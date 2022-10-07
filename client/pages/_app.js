@@ -1,6 +1,7 @@
 // import App from 'next/app'
 import '../components/Sidebar.css'
 import '../components/index.css'
+import '../components/profile.css'
 
 function MyApp({ Component, pageProps }) {
     return <Component {...pageProps} />
