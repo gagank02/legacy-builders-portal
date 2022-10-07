@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Sidebar from '../components/Sidebar'
+import Sidebar from '../components/Sidebar.js'
 
 export default function Home() {
   return (
@@ -23,6 +23,9 @@ export default function Home() {
           <div className='home-progress'>
             <span>70%</span>
           </div>
+        <div> 
+          <Sidebar />
+        </div>
       </>
   )
 }
