@@ -9,11 +9,24 @@ const useStyles = makeStyles({
         height: '100%',
     },
 
+    logout: {
+        textDecoration: 'none',
+        cursor: 'pointer',
+        color: 'black',
+        marginLeft: '38px',
+        fontStyle: 'normal',
+        fontSize: '16px',
+        ['@media (max-width: 1000px)']: {
+            display: 'none',
+        },
+    },
+
     header: {
-        position: 'relative',
+        position: 'fixed',
         width: '100%',
         zIndex: 5,
-
+        padding: 0,
+        margin: 0,
         display: 'flex',
         padding: '2rem',
         background: 'white',
@@ -21,10 +34,7 @@ const useStyles = makeStyles({
         top: 0,
         left: 0,
         // border: 'red 3px solid',
-
-        [`@media (max-width: ${mobile})`]: {
-            padding: 0
-        },
+        boxShadow: "0px 16px 20px rgba(0, 0, 0, 0.15)",
     },
 
     sidebarOpener: {

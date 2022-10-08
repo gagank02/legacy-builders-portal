@@ -10,11 +10,11 @@ import { blue } from '@mui/material/colors';
 import MuiInformationTable from './MuiInformationTable';
 
 
-export default function MuiProfileCard({userName, email, location, courses}) {
+export default function MuiProfileCard({firstName, lastName, userName, email, location, courses}) {
   return (
     <Card sx={{ width: "65vw", height: "32vh"}}>
     <CardContent>
-        <h2>First Last</h2>
+        <h2>{firstName} {lastName}</h2>
           <p style = {{paddingLeft: "5vw"}}>Profile Information:</p>
         {/* <MuiInformationTable userName={userName} email = {email} location = {location} /> */}
         

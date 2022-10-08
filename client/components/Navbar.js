@@ -2,7 +2,10 @@ import React, { useState, useEffect } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
 import { AppBar, Box, Button, ClickAwayListener, Container, IconButton, Menu, MenuItem, Toolbar, Typography, Avatar } from '@mui/material';
 import Link from 'next/link';
+import axios from 'axios';
 import { useStyles } from './NavbarStyles.js';
+
+const API_URL = 'http://localhost:3001'
 
 export default function Navbar() {
     const classes = useStyles();
@@ -35,12 +38,28 @@ export default function Navbar() {
     };
 
     const [currentPage, setCurrentPage] = useState("")
-    const [curUser, setCurUser] = useState(null)
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
 
     useEffect(() => {
         var curPage = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
         setCurrentPage(curPage);
 
+        const config = {
+            headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
+        }
+
+        axios.get(`${API_URL}/auth/me`, config)
+            .then(function (res) {
+                console.log(res);
+                let data = res.data.user;
+                setFirstName(data.firstName);
+                setLastName(data.lastName);
+            })
+            .catch(function (err) {
+                console.log(err);
+                window.location.href = '/login'
+            });
     }, [])
 
     function logout() {
@@ -53,7 +72,7 @@ export default function Navbar() {
             <AppBar className={classes.header}>
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
-                    
+
 
                         <Box className={classes.logoBox}>
                             <Link href="/" passHref>
@@ -88,22 +107,22 @@ export default function Navbar() {
                                 <a rel="noreferrer">
                                     <img src="/assets/new.png" alt='notifications' />
                                 </a> */}
-                                <button onClick={logout}>Log Out</button>
+                                <a onClick={logout}><Typography className={classes.logout}>Log Out</Typography></a>
                             </Box>
                             <Typography sx={{ color: '#DFE0EB', fontSize: "30px", textAlign: 'center', padding: '0 15px' }}>|</Typography>
                             <Box className={classes.profile}>
-                            <Typography className={classes.name}>FirstName LastName</Typography>
-                            <IconButton
-                                size="large"
-                                aria-label="account of current user"
-                                aria-controls="menu-appbar"
-                                onClick={handleOpenMenu}
-                                color="info"   
-                                className={classes.sidebarOpener}
-                                href="/profile"
-                            >
-                                <Avatar>OP</Avatar>
-                            </IconButton>
+                                <Typography className={classes.name}>{firstName} {lastName}</Typography>
+                                <IconButton
+                                    size="large"
+                                    aria-label="account of current user"
+                                    aria-controls="menu-appbar"
+                                    onClick={handleOpenMenu}
+                                    color="info"
+                                    className={classes.sidebarOpener}
+                                    href="/profile"
+                                >
+                                    <Avatar>{firstName.length > 0 ? firstName.charAt(0) : 'OP'}</Avatar>
+                                </IconButton>
                             </Box>
                         </Box>
 
@@ -148,7 +167,20 @@ export default function Navbar() {
                                                 </a>
                                             </Link>
                                         </MenuItem>
+
                                     ))}
+                                    <MenuItem>
+                                        <Link key='logout' href='' passHref>
+                                            <a onClick={logout} style={{
+                                                textDecoration: 'none',
+                                                color: '#000'
+                                            }}>
+                                                <Typography>
+                                                    Log Out
+                                                </Typography>
+                                            </a>
+                                        </Link>
+                                    </MenuItem>
                                 </Menu>
                             </Box>
                         </ClickAwayListener>

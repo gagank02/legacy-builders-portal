@@ -9,6 +9,10 @@
     
 }
 
+.container {
+  padding-top: 10%;
+}
+
 .parent {
   float:left;
   margin: 1rem; 
@@ -42,3 +46,9 @@
 /* .profile .parent h1 {
    color:rgb(40, 68, 146); 
 } */
+
+@media only screen and (max-width: 420px) {
+  .container {
+      padding-top: 30%;
+  }
+}
