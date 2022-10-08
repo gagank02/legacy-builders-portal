@@ -1,46 +1,120 @@
-.resources h3{
-    margin-top: 150px;
+.resources {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10%;
+}
+
+.loc {
+    /* margin-top: 150px; */
+    /* margin-top: 12%; */
     color: white;
     background-color: #324258;
     border-radius: 5px;
-    width: 23%;
-    height: 10%;
-    margin-left: 37.5%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 0;
+    gap: 100px; */
 }
 
-.resources h3 p{
+.locContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.resources p {
     text-decoration: underline;
 }
 
-.resources .cards{
+.resources h3 p {
+    /* display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-decoration: underline; */
+}
+
+.resources .cards {
     display: flex;
-    padding-left: 50px;
+    /* padding-left: 50px; */
     gap: 5px;
 }
 
-.resources .other-resources{
-    border-radius: 5px;
-    padding-left: 570px;
+.resources .other-resources {
+    display: flex;
+    justify-content: center;
+    width: auto;
 }
 
 @media screen and (max-width: 420px) {
-    .resources h3{
-        width: 70%;
-        margin-left: 15%;
+    .resources {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 30%;
     }
 
-    .resources .cards{
+    .loc {
+        /* margin-top: 150px; */
+        /* margin-top: 12%; */
+        color: white;
+        background-color: #324258;
+        border-radius: 5px;
+        width: 50%;
+        display: flex;
+        /* justify-content: center;
+        align-items: center; */
+        /* padding: 0;
+        gap: 100px; */
+    }
+
+    .locContent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+    }
+
+    .resources p {
+        text-decoration: underline;
+        font-size: 16px;
+        width: 100%;
         padding-left: 10px;
-        display: inline;
-        float: center;
+    }
+
+    h3 {
+        /* display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        text-decoration: underline; */
+        font-size: 16px;
+    }
+
+    .resources .cards {
+        display: flex;
+        /* padding-left: 50px; */
+        gap: 5px;
+    }
+
+    .resources .other-resources {
+        display: flex;
+        justify-content: center;
         width: auto;
-    }
-
-    .resource .cards .card1[width]{
-        width: 95vw !important;
-    }
-
-    .css-1gp1lk7-MuiPaper-root-MuiCard-root{
-        width: 95vw !important;
     }
 }

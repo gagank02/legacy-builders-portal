@@ -86,7 +86,7 @@ const CommunityPostList = ({header, firstName, lastName, tag}) => {
           </div>
           <div className='bottom'>
             <h4>By: {firstName} {lastName}</h4>
-            <h4 className='comments'>Comments</h4>
+            <h4>Comments</h4>
           </div>
         </div>
       </div>
@@ -121,7 +121,7 @@ export default function Community() {
 
   return (
       <>
-      <div>
+      <div className="container">
         <Navbar></Navbar>
         <div className='CreateBar'>
           <form>

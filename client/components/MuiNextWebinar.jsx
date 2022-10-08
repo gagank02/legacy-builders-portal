@@ -16,24 +16,28 @@ const bull = (
   </Box>
 );
 
-export default function MuiNextWebinar({header, info, size, url}) {
+export default function MuiNextWebinar({ header, info, size, url }) {
   return (
-    <Card sx={{ width: size}}>
-            
+    <Card sx={{
+      width: size, ['@media (max-width: 420px)']: {
+        width: "100%",
+      },
+    }}>
+
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-          
+
         </Typography>
         <Typography variant="h5" component="div" color="rgb(40, 68, 146)">
-          
+
           {header}
         </Typography>
-        <Typography sx={{ }} color="text.secondary">
+        <Typography sx={{}} color="text.secondary">
           {info}
         </Typography>
         <Typography variant="body2">
           <a href={url}>{url}</a>
-        
+
         </Typography>
       </CardContent>
       <CardActions>

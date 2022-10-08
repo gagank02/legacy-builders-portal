@@ -17,7 +17,7 @@ const useStyles = makeStyles({
         fontStyle: 'normal',
         fontSize: '16px',
 
-        ['@media (max-width: 1000px)']: {
+        ['@media (max-width: 420px)']: {
             display: 'none',
         },
 
@@ -25,7 +25,7 @@ const useStyles = makeStyles({
             textDecoration: 'none',
             borderBottom: "3px solid",
 
-            ['@media (max-width: 1000px)']: {
+            ['@media (max-width: 420px)']: {
                 display: 'none',
             }
         }
@@ -104,7 +104,7 @@ const useStyles = makeStyles({
         justifyContent: 'center',
         paddingRight: '20rem',
 
-        ['@media (max-width: 1000px)']: {
+        ['@media (max-width: 420px)']: {
             display: 'none',
         }
     },
@@ -119,7 +119,7 @@ const useStyles = makeStyles({
         fontWeight: 700,
         fontSize: '16px',
 
-        ['@media (max-width: 1000px)']: {
+        ['@media (max-width: 420px)']: {
             display: 'none',
         },
 
@@ -127,7 +127,7 @@ const useStyles = makeStyles({
             textDecoration: 'none',
             borderBottom: "3px solid",
 
-            ['@media (max-width: 1000px)']: {
+            ['@media (max-width: 420px)']: {
                 display: 'none',
             }
         }
@@ -155,7 +155,7 @@ const useStyles = makeStyles({
             fontWeight: 700,
             fontSize: '16px',
 
-            ['@media (max-width: 1000px)']: {
+            ['@media (max-width: 420px)']: {
                 display: 'none',
             }
         }
@@ -166,7 +166,7 @@ const useStyles = makeStyles({
         alignItems: 'center',
         flexGrow: 0,
 
-        ['@media (max-width: 1000px)']: {
+        ['@media (max-width: 420px)']: {
             display: 'none',
         }
     },
@@ -195,14 +195,14 @@ const useStyles = makeStyles({
         whiteSpace: 'nowrap',
         textAlign: 'center',
 
-        ['@media (max-width: 1000px)']: {
+        ['@media (max-width: 420px)']: {
             display: 'none',
         }
     },
 
     menuBox: {
         display: 'none',
-        ['@media (max-width: 1000px)']: {
+        ['@media (max-width: 420px)']: {
             display: 'flex',
             position: 'absolute',
             flexGrow: 1,
@@ -212,7 +212,7 @@ const useStyles = makeStyles({
 
     menu: {
         display: 'none',
-        ['@media (max-width: 1000px)']: {
+        ['@media (max-width: 420px)']: {
             display: 'flex',
             position: 'absolute',
             right: 0,
