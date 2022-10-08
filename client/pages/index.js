@@ -9,11 +9,11 @@ import MuiNextWebinar from '../components/MuiNextWebinar'
 import {useEffect} from "react";
 
 export default function Home() {
-  useEffect(() => {
-    if (!localStorage.getItem('token')) {
-      window.location = '/login';
-    }
-  });
+  // useEffect(() => {
+  //   if (!localStorage.getItem('token')) {
+  //     window.location = '/login';
+  //   }
+  // });
 
   return (
       <>
@@ -26,15 +26,10 @@ export default function Home() {
           <div className = 'child'>
             <MuiTable/>
           </div>
-<<<<<<< HEAD
-          <div className = 'child' >
-            <MuiCard header = "Your Progress" info = "70% finished" size = "30vw" img="/assets/progress bar.png"/>
-=======
           <div className = 'child'>
-            <MuiCard header = "Your Progress" info = "70% finished" text-align = "center" size = "30vw" img="/assets/progress bar.png"/>
->>>>>>> 210f1a87f18058d4f284db1dcdc73173386c8f7b
+            <MuiCard header = "Your Progress" info = "70% finished" text-align = "center" size = "31vw" img="/assets/progress bar.png"/>
             <br></br>
-            <MuiNextWebinar header = "Your Next Webinar:" info= "Tomorrow, 3 pm CST" url = "https://urllink.com" size = "30vw" />
+            <MuiNextWebinar header = "Your Next Webinar:" info= "Tomorrow, 3 pm CST" url = "https://urllink.com" size = "31vw" />
           </div>
         </div>
       </>

@@ -23,20 +23,20 @@ const Profile = () => {
             headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
         }
 
-        axios.get(`${API_URL}/auth/me`, config)
-            .then(function (res) {
-                console.log(res);
-                let data = res.data.user;
-                setFirstName(data.firstName);
-                setLastName(data.lastName);
-                setUserName(data.userName);
-                setEmail(data.email);
-                setLocation(data.location);
-            })
-            .catch(function (err) {
-                console.log(err);
-                window.location = '/login'
-            });
+        // axios.get(`${API_URL}/auth/me`, config)
+        //     .then(function (res) {
+        //         console.log(res);
+        //         let data = res.data.user;
+        //         setFirstName(data.firstName);
+        //         setLastName(data.lastName);
+        //         setUserName(data.userName);
+        //         setEmail(data.email);
+        //         setLocation(data.location);
+        //     })
+        //     .catch(function (err) {
+        //         console.log(err);
+        //         window.location = '/login'
+        //     });
     }, [])
 
     return (

@@ -49,17 +49,17 @@ export default function Navbar() {
             headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
         }
 
-        axios.get(`${API_URL}/auth/me`, config)
-            .then(function (res) {
-                console.log(res);
-                let data = res.data.user;
-                setFirstName(data.firstName);
-                setLastName(data.lastName);
-            })
-            .catch(function (err) {
-                console.log(err);
-                window.location.href = '/login'
-            });
+        // axios.get(`${API_URL}/auth/me`, config)
+        //     .then(function (res) {
+        //         console.log(res);
+        //         let data = res.data.user;
+        //         setFirstName(data.firstName);
+        //         setLastName(data.lastName);
+        //     })
+        //     .catch(function (err) {
+        //         console.log(err);
+        //         window.location.href = '/login'
+        //     });
     }, [])
 
     function logout() {
