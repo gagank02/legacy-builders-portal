@@ -37,7 +37,7 @@ export default function MuiProfileCard({firstName, lastName, userName, email, lo
         </ul>
         </div>
     </CardContent>
-    <br></br><br></br><br></br><br></br><br></br>
+    <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
     <CardActions>
       <Button size="small">Edit</Button>
     </CardActions>

@@ -51,4 +51,10 @@
   .container {
       padding-top: 30%;
   }
+  .css-2arrk-MuiPaper-root-MuiCard-root {
+    width: 70vw;
+  }
+  .css-11xur9t-MuiPaper-root-MuiTableContainer-root {
+    width: 70vw;
+  }
 }
