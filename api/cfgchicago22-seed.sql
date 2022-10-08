@@ -9,11 +9,34 @@ VALUES ('davidjack@gmail.com',
         'helllo'
 );
 
-INSERT INTO courses(name)
+INSERT INTO courses(title)
 VALUES ('Name');
 
 INSERT INTO user_courses(user_id, course_id)
 VALUES (
         1,
         1
+);
+
+INSERT INTO pages(course_id)
+VALUES (
+    1
+);
+
+
+INSERT INTO comments(page_id, user_id)
+VALUES (
+    1,
+    1
+);
+
+INSERT INTO quizzes(courses_id)
+VALUES (
+    1
+);
+
+INSERT INTO quiz_results(quiz_id, user_courses_id)
+VALUES (
+    1,
+    1
 );

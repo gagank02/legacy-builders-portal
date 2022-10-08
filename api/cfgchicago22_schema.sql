@@ -1,6 +1,6 @@
 CREATE TABLE users( 
     id                      SERIAL PRIMARY KEY,
-    username                TEXT NOT NULL,
+    username                TEXT NOT NULL UNIQUE,
     password                TEXT NOT NULL,
     first_name              TEXT NOT NULL,
     last_name               TEXT NOT NULL,
@@ -12,7 +12,7 @@ CREATE TABLE users(
 CREATE TABLE courses( 
     id                      SERIAL PRIMARY KEY,
     content                 TEXT,
-    name                    TEXT NOT NULL,                
+    title                   TEXT NOT NULL,                
     created_at              TIMESTAMP NOT NULL DEFAULT NOW()
 );
 
@@ -29,18 +29,18 @@ CREATE TABLE pages(
 
 CREATE TABLE comments( 
     id                      SERIAL PRIMARY KEY,
-    page_id                 INTEGER NOT NULL REFERENCES page(id),
+    page_id                 INTEGER NOT NULL REFERENCES pages(id),
     user_id                 INTEGER NOT NULL REFERENCES users(id),
     date                    TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE quizzes (
+    id                      SERIAL PRIMARY KEY,
+    courses_id              INTEGER NOT NULL REFERENCES courses(id)
 );
 
 CREATE TABLE quiz_results (
     id                      SERIAL PRIMARY KEY,
     quiz_id                 INTEGER NOT NULL REFERENCES quizzes(id),
     user_courses_id         INTEGER NOT NULL REFERENCES user_courses(id)
-)
-
-CREATE TABLE quizzes (
-    id                      SERIAL PRIMARY KEY,
-    courses_id              INTEGER NOT NULL REFERENCES courses(id)
-)
+);
