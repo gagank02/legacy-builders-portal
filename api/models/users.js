@@ -18,7 +18,7 @@ class User {
     static async makePublicUser(user) {
         return {
             id: user.id,
-            username: user.username,
+            userName: user.username,
             firstName: user.first_name,
             lastName: user.last_name,
             email: user.email,
@@ -30,10 +30,11 @@ class User {
         const credentials = req.body;
         const requiredFields = [
             "email",
-            "username",
+            "userName",
             "firstName",
             "lastName",
             "password",
+            "location"
         ];
 
         requiredFields.forEach((field) => {
@@ -50,7 +51,7 @@ class User {
 
         const check = await db.query(
             "SELECT * FROM users u WHERE u.username = $1",
-            [credentials.username]
+            [credentials.userName]
         );
 
         if (check.rowCount >= 1) {
@@ -61,7 +62,7 @@ class User {
         const dbRes = await db.query(
             "INSERT INTO users(username, password, first_name, last_name, email, location) VALUES ($1, $2, $3, $4, $5, $6) RETURNING username, first_name, last_name, email, created_at, location;",
             [
-                credentials.username,
+                credentials.userName,
                 hashedPassword,
                 credentials.firstName,
                 credentials.lastName,
@@ -74,14 +75,14 @@ class User {
 
     static async logIn(req, res) {
         const credentials = req.body;
-        const requiredFields = ["username", "password"];
+        const requiredFields = ["userName", "password"];
         requiredFields.forEach((field) => {
             if (!credentials.hasOwnProperty(field)) {
                 throw new BadRequestError(`Missing ${field} in request body.`);
             }
         });
 
-        const user = await User.fetchUserByUsername(credentials.username);
+        const user = await User.fetchUserByUsername(credentials.userName);
         if (user) {
             const isValid = await bcrypt.compare(
                 credentials.password,
