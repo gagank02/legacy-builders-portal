@@ -95,7 +95,17 @@ export default function Navbar() {
                             <Typography sx={{ color: '#DFE0EB', fontSize: "30px", textAlign: 'center', padding: '0 15px' }}>|</Typography>
                             <Box className={classes.profile}>
                                 <Typography sx={{ color: 'black', textAlign: 'center' }}>FirstName LastName</Typography>
+                            <IconButton
+                                size="large"
+                                aria-label="account of current user"
+                                aria-controls="menu-appbar"
+                                onClick={handleOpenMenu}
+                                color="info"   
+                                className={classes.sidebarOpener}
+                                href="/profile"
+                            >
                                 <Avatar>OP</Avatar>
+                            </IconButton>
                             </Box>
                         </Box>
                     </Toolbar>
