@@ -26,10 +26,10 @@ users.signUp = async (req, res) => {
             throw new errors.BadRequestError("null value for user sign-up");
         }
     });
-    res = await db.query(
-        "INSERT INTO users(username, password, first_name, last_name, email, created_at, location) VALUES ($1, $2, $3, $4, $5, $6, $7);", 
+    const ret = await db.query(
+        "INSERT INTO users(username, password, first_name, last_name, email, created_at, location) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING username, first_name, last_name, email, created_at, location;", 
         values);
-    return res;
+    return ret;
 };
 
 users.logIn = async (req, res) => {
@@ -37,14 +37,15 @@ users.logIn = async (req, res) => {
         console.log("User already logged in");
         return;
     }
+    tokens.generateToken()
     const hash = bcrypt.hashSync(req.body.password, saltRounds);
     const values = [req.body.userName, hash];
 
-    res = await db.query(
-        "SELECT userName FROM users u WHERE u.username = $1 AND u.password $2", 
+    const ret = await db.query(
+        "SELECT * FROM users u WHERE u.username = $1 AND u.password $2", 
         values);
 
-    return res;
+    return ret;
 };
 
 module.exports = users;
