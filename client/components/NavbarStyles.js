@@ -35,7 +35,7 @@ const useStyles = makeStyles({
     wordsLogo: {
         position: 'static',
         paddingTop: '15px',
-    
+        width: '225px',
 
         [`@media (max-width: ${mobile})`]: {
             display: 'none'
@@ -49,8 +49,8 @@ const useStyles = makeStyles({
 
     logo: {
         position: 'static',
-        width: '77px',
-        height: '78px',
+        width: '55px',
+        height: '55px',
         left: '0px',
         top: '0px',
 
@@ -106,7 +106,7 @@ const useStyles = makeStyles({
         textDecoration: 'none',
         borderBottom: "3px solid",
         cursor: 'pointer',
-        color: 'white',
+        color: 'black',
         marginLeft: '38px',
         fontFamily: 'Roboto',
         fontStyle: 'normal',
@@ -117,7 +117,7 @@ const useStyles = makeStyles({
             textDecoration: 'none',
             borderBottom: "3px solid",
             cursor: 'pointer',
-            color: 'white',
+            color: 'black',
             marginLeft: '38px',
             fontFamily: 'Roboto',
             fontStyle: 'normal',

@@ -83,6 +83,73 @@ export default function Navbar() {
                             ))}
                         </Box>
 
+                        <ClickAwayListener onClickAway={handleCloseMenu}>
+                            <Box className={classes.menuBox}>
+                                <IconButton
+                                    size="large"
+                                    aria-label="account of current user"
+                                    aria-controls="menu-appbar"
+                                    onClick={handleOpenMenu}
+                                    color="inherit"
+
+                                >
+                                    <MenuIcon />
+                                </IconButton>
+                                <Menu
+                                    id="menu-appbar"
+                                    anchorEl={needsMenu}
+                                    anchorOrigin={{
+                                        vertical: 'bottom',
+                                        horizontal: 'left',
+                                    }}
+                                    keepMounted
+                                    transformOrigin={{
+                                        vertical: 'top',
+                                        horizontal: 'left',
+                                    }}
+                                    open={Boolean(needsMenu)}
+                                    onClose={handleCloseMenu}
+                                    className={classes.menu}
+                                >
+                                    {pagesData.map(({ label, href }) => (
+                                        <MenuItem>
+                                            <Link key={label} href={href} passHref>
+                                                <a rel="noreferrer" style={{
+                                                    textDecoration: 'none',
+                                                    color: '#000'
+                                                }}>
+                                                    <Typography>
+                                                        {label}
+                                                    </Typography>
+                                                </a>
+                                            </Link>
+                                        </MenuItem>
+                                    ))}
+
+                                    <MenuItem>
+                                        <Link key="register" href={"https://docs.google.com/forms/d/e/1FAIpQLScwJ8LUYJEkTLZSNS7uGVm63E-hrQH2Snqocp2zUcWuS8dF2w/viewform"} target="_blank" passHref>
+                                            <a rel="noreferrer" style={{
+                                                textDecoration: 'none',
+                                                color: '#000'
+                                            }}>
+                                                <Typography>Register</Typography>
+                                            </a>
+                                        </Link>
+                                    </MenuItem>
+                                    <MenuItem>
+                                        <Link key="contact_us" href={"mailto:reflectionsprojections@gmail.com"} passHref>
+                                            <a rel="noreferrer" style={{
+                                                textDecoration: 'none',
+                                                color: '#000'
+                                            }}>
+                                                <Typography>Contact Us</Typography>
+                                            </a>
+                                        </Link>
+                                    </MenuItem>
+                                </Menu>
+                            </Box>
+                        </ClickAwayListener>
+
                         <Box className={classes.util}>
                             <Box className={classes.tools}>
                                 <a rel="noreferrer">
