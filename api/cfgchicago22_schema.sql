@@ -19,7 +19,8 @@ CREATE TABLE courses(
 CREATE TABLE user_courses( 
     id                      SERIAL PRIMARY KEY,
     user_id                 INTEGER NOT NULL REFERENCES users(id),
-    course_id               INTEGER NOT NULL REFERENCES courses(id)
+    course_id               INTEGER NOT NULL REFERENCES courses(id),
+    progress                INTEGER NOT NULL DEFAULT 0
 );
 
 CREATE TABLE pages( 
