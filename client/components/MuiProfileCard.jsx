@@ -22,7 +22,7 @@ export default function MuiProfileCard({userName, email, location, courses}) {
         <ul style={{ }}>
         <p> <img src = "assets/Username.png"  width = "10 px"  />
         &nbsp;Username:</p>  
-            <p>   <img src = "assets/Email.png"width = "20px"  />         
+            <p>   <img src = "assets/Mail.png"width = "13px"  />         
             &nbsp; Email: </p>
               <p> <img src = "assets/Location.png"  width = "10px"  />
               &nbsp; Location:</p>

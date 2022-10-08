@@ -3,8 +3,9 @@ import '../components/Sidebar.css'
 import '../components/index.css'
 import '../components/profile.css'
 import '../components/learn.css'
-import '../components/signIn.css'
+import '../components/login.css'
 import '../components/community.css'
+import '../components/resources.css'
 
 function MyApp({ Component, pageProps }) {
     return <Component {...pageProps} />

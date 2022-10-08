@@ -6,10 +6,15 @@ import MuiTable from '../components/MuiTable.jsx'
 import MuiButton from '../components/MuiButton'
 import MuiDashboard from '../components/MuiDashboard'
 import MuiNextWebinar from '../components/MuiNextWebinar'
-
-
+import {useEffect} from "react";
 
 export default function Home() {
+  useEffect(() => {
+    if (!localStorage.getItem('token')) {
+      window.location = '/login';
+    }
+  });
+
   return (
       <>
         <Navbar />
@@ -21,8 +26,13 @@ export default function Home() {
           <div className = 'child'>
             <MuiTable/>
           </div>
+<<<<<<< HEAD
           <div className = 'child' >
             <MuiCard header = "Your Progress" info = "70% finished" size = "30vw" img="/assets/progress bar.png"/>
+=======
+          <div className = 'child'>
+            <MuiCard header = "Your Progress" info = "70% finished" text-align = "center" size = "30vw" img="/assets/progress bar.png"/>
+>>>>>>> 210f1a87f18058d4f284db1dcdc73173386c8f7b
             <br></br>
             <MuiNextWebinar header = "Your Next Webinar:" info= "Tomorrow, 3 pm CST" url = "https://urllink.com" size = "30vw" />
           </div>
