@@ -50,7 +50,7 @@ const LessonCard = ({ title, category, img, time }) => {
         <>
             <div className="lesson-card">
                 <div className="lesson-img">
-                    <img className="limg" src={img} />
+                    <a href='/webinar'><img className="limg" src={img} /></a>
                 </div>
                 <div className="row-content">
                     <div className="category">
