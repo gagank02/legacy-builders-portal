@@ -17,8 +17,8 @@ export default function MuiDashboard({header, info, size, img, desc}) {
           
         </Typography>
         <Typography variant="h5" component="div" color="rgb(40, 68, 146)">
+          <h2>{header}</h2>
           
-          {header}
         </Typography>
         <Typography sx={{ mb: 1.5 }} color="text.secondary">
           {info}
@@ -26,11 +26,9 @@ export default function MuiDashboard({header, info, size, img, desc}) {
         <Typography variant="body2">
           <br/>
           <MuiButton desc={desc} />
+          
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small"></Button>
-      </CardActions>
     </Card>
   );
 }

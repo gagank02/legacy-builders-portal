@@ -5,7 +5,7 @@ import Button from '@mui/material/Button';
 export default function MuiButton({desc}) {
   return (
     <Stack spacing={2} direction="row">
-      <Button variant="contained">{desc}</Button>
+      <Button variant="outlined">{desc}</Button>
     </Stack>
   );
 }
