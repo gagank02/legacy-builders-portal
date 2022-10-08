@@ -51,4 +51,4 @@ router.post('/quizresults', async (req, res) => {
     res.send('hello world');
 })
 
-module.exports = router;
+module.exports = contentRoutes;
