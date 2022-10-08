@@ -3,48 +3,24 @@ body{
 }
 
 .welcome {
-    padding-left: 80px;
-    padding-right: 40px;
+    padding-top: 140px;
+    padding-left: 3vw;
 }
-/* .home-content {
-    position: relative;
-    width: 1105px;
-    height: 454px;  
-    border: 1px solid black;
-} */
-/* 
-.home-content h2{
-    padding-left: 552px;
-    padding-top: 227px;
-} */
-
-/* .home-lessons {
-    padding: 20px;
-    border: 1px solid black;
-    float: left;
-    height: 50%;
-} */
-
-/* .home-progress {
-    padding: 20px;
-    position: relative;
-    float: right;
-    width: 1105px;
-    height: 50%;  
-    border: 1px solid black;
-} */
 
 .parent {
     margin: 1rem;
     padding: 2rem 2rem;
     text-align: center;
+    padding-left: 5vw;
+    /* padding-left: 100 px; */
     
   }
   .child {
     display: inline-block;
-    padding: 1rem 1rem;
+    padding: 5vh 5vh 5vw 5vw;
     vertical-align: middle;
     text-align: center;
+    /* padding-left: 100px; */
   }
 
   .css-s3sxxk-MuiPaper-root-MuiCard-root {
@@ -55,16 +31,15 @@ body{
     border-radius: 4px;
     box-shadow: 0px 2px 1px -1pxrgba(0,0,0,0.2),0px 1px 1px 0pxrgba(0,0,0,0.14),0px 1px 3px 0pxrgba(0,0,0,0.12);
     overflow: hidden;
-    width: 87vw;
+    width: 91vw;
 }
 
-.css-1pnmrwp-MuiTypography-root {
-    margin: 0;
-    font-family: "Roboto","Helvetica","Arial",sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.5;
-    letter-spacing: 0.00938em;
-    text-align: center;
-    color: rgba(0, 0, 0, 0.6);
+@media screen and (max-width: 420px)
+{
+    .css-1ig0swr-MuiPaper-root-MuiCard-root {
+        width: 80vw;
+    }
+    .css-nmbwc3-MuiTable-root {
+        width: 80vw;
+    }
 }

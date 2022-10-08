@@ -16,7 +16,10 @@ const Resources = () => {
             <h3>Results based on: <p> Chicago, Illinois</p></h3>
             <br></br>
             <div className='cards'>
+                <div className='card1'>
                 <MuiResourceCard firstName={volunteers[0].firstName} lastName={volunteers[0].lastName} location={volunteers[0].location} description={volunteers[0].description}></MuiResourceCard>
+                
+                </div>
                 <br></br>
                 <MuiResourceCard firstName={volunteers[1].firstName} lastName={volunteers[1].lastName} location={volunteers[1].location} description={volunteers[1].description}></MuiResourceCard>
             </div>

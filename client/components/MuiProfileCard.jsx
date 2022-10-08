@@ -31,8 +31,8 @@ export default function MuiProfileCard({ firstName, lastName, userName, email, l
   }
 
   return (
-    <Card sx={{ width: "65vw", height: "32vh" }}>
-      <CardContent>
+    <Card sx={{ width: "65vw", height: "31.5vh"}}>
+    <CardContent>
         <h2>{firstName} {lastName}</h2>
         <p style={{ paddingLeft: "5vw" }}>Profile Information:</p>
         {/* <MuiInformationTable userName={userName} email = {email} location = {location} /> */}
