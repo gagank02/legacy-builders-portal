@@ -1,0 +1,17 @@
+.resources h3{
+    color: white;
+    background-color: #324258;
+    border-radius: 5px;
+    width: 23%;
+    height: 10%;
+}
+
+.resources h3 p{
+    text-decoration: underline;
+}
+
+.resources .cards{
+    display: flex;
+    padding-left: 50px;
+    gap: 5px;
+}
