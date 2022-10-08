@@ -2,10 +2,9 @@ const express = require('express');
 const router = express.Router();
 const Courses = require('../models/courses');
 const Quizzes = require('../models/quizzes');
-// const UserCourses = require('../models/user-courses');
 const Pages = require('../models/pages');
 const Comments = require('../models/comments');
-// const QuizResults = require('../models/quiz-results');
+const Users = require('../models/users');
 const { validateToken } = require("../utils/tokens");
 
 
@@ -18,28 +17,28 @@ router.post('/', async (req, res) => {
 
 router.get('/courses', async (req, res) => {
     req.decoded = validateToken(req.body.token);
-    var course = await Courses.getCourse(req.body);
+    const course = await Courses.getCourse(req.body);
     console.log(course);   
     return res.status(200).json({token, course});
 });
 
 router.get('/quizzes', async (req, res) => {
     req.decoded = validateToken(req.body.token);
-    var quiz = await Quizzes.getQuiz(req.body);
+    const quiz = await Quizzes.getQuiz(req.body);
     console.log(quiz);    
     return res.status(200).json({token, quiz});
 });
 
 router.get('/pages', async (req, res) => {
     req.decoded = validateToken(req.body.token);
-    var page = await Pages.getPage(req.body);
+    const page = await Pages.getPage(req.body);
     console.log(page);     
     return res.status(200).json({token, page});
 });
 
 router.get('/comments', async (req, res) => {
     req.decoded = validateToken(req.body.token);
-    var comment = await Comments.getComment(req.body);
+    const comment = await Comments.getComment(req.body);
     console.log(comment);
     return res.status(200).json({token, comment});
 });
@@ -47,28 +46,28 @@ router.get('/comments', async (req, res) => {
 
 router.put('/progress', async (req, res) => {
     req.decoded = validateToken(req.body.token);
-    var progress = await courses.setProgress(req.body);
+    const progress = await Courses .setProgress(req.body);
     console.log(progress);
     return res.status(200).json({token, progress});
 });
 
 router.put('/location', async (req, res) => {
     req.decoded = validateToken(req.body.token);
-    var location = await users.setLocation(req.body);
+    const location = await Users.setLocation(req.body);
     console.log(progress);
     return res.status(200).json({token, location});
 });
 
 router.post('/location', async (req, res) => {
     req.decoded = validateToken(req.body.token);
-    var location = await users.setLocation(req.body);
+    const location = await Users.setLocation(req.body);
     console.log(progress);
     return res.status(200).json({token, location});
 });
 
 router.post('/quiz-try', async (req, res) => {
     req.decoded = validateToken(req.body.token);
-    var quizAttempt = await quizzes.quizTry(req.body);
+    const quizAttempt = await Quizzes.quizTry(req.body);
     console.log(progress);
     return res.status(200).json({token, quizAttempt});
 });
