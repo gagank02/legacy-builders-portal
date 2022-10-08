@@ -4,20 +4,22 @@ import SearchBar from "../components/SearchBar"
 
 const data = [
     {
-        title: "Empathy",
-        category: "Conflict Resolution"
+        title: "Managing Finances",
+        category: "Finance",
+        img: "/assets/lesson_1.png",
+        time: "30"
     },
     {
-        title: "Taxes",
-        category: "Finance"
+        title: "Conflict Resolution",
+        category: "Life",
+        img: "/assets/lesson_2.png",
+        time: "45"
     },
     {
-        title: "Communication",
-        category: "Conflict Resolution"
-    },
-    {
-        title: "Learning Curves",
-        category: "Career Skills"
+        title: "Building a Resume",
+        category: "Career",
+        img: "/assets/lesson_3.png",
+        time: "60"
     }
 ];
 
@@ -25,7 +27,7 @@ const filterData = (query, data) => {
     if (!query) {
         return data;
     } else {
-        return data.filter((d) => d.toLowerCase().includes(query));
+        return data.filter((d) => d['title'].toLowerCase().includes(query));
     }
 };
 
@@ -41,9 +43,25 @@ const CategoryCard = ({ label }) => {
     )
 }
 
-const LessonCard = ({title, category}) => {
+const LessonCard = ({ title, category, img, time }) => {
     return (
         <>
+            <div className="lesson-card">
+                <div className="lesson-img">
+                    <img className="limg" src={img} />
+                </div>
+                <div className="row-content">
+                    <div className="category">
+                        {category}
+                    </div>
+                    <div className="time">
+                        {time} mins
+                    </div>
+                </div>
+                <div className="lesson-title">
+                    {title}
+                </div>
+            </div>
         </>
     )
 }
@@ -63,37 +81,22 @@ export default function Learn() {
                     <CategoryCard label='Problem Skills' />
                     <CategoryCard label='Conflict Resolution' />
                 </div>
+
                 <div className="searchbar">
                     <SearchBar setSearchQuery={setSearchQuery} label="lesson" />
                 </div>
 
-
-
-
-
-
+                <div className="lessons">
+                    {dataFiltered.map(({ title, category, img, time }) => (
+                        <LessonCard
+                            title={title}
+                            category={category}
+                            img={img}
+                            time={time}
+                        />
+                    ))}
+                </div>
             </div>
         </>
     )
 }
-
-{/* <div style={{ padding: 3 }}>
-                {dataFiltered.map((d) => (
-                    <div
-                        className="text"
-                        style={{
-                            padding: 5,
-                            justifyContent: "normal",
-                            fontSize: 20,
-                            color: "blue",
-                            margin: 1,
-                            width: "250px",
-                            BorderColor: "green",
-                            borderWidth: "10px"
-                        }}
-                        key={d.id}
-                    >
-                        {d}
-                    </div>
-                ))}
-            </div> */}

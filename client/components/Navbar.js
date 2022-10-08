@@ -15,8 +15,8 @@ export default function Navbar() {
             href: '/learn'
         },
         {
-            label: 'Forum',
-            href: '/forum'
+            label: 'Community',
+            href: '/Community'
         },
         {
             label: 'Resources',
@@ -83,6 +83,22 @@ export default function Navbar() {
                             ))}
                         </Box>
 
+                        <Box className={classes.util}>
+                            {/* <Box className={classes.tools}>
+                                <a rel="noreferrer">
+                                    <img src="/assets/search.png" alt='search' />
+                                </a>
+                                <a rel="noreferrer">
+                                    <img src="/assets/new.png" alt='notifications' />
+                                </a>
+                            </Box> */}
+                            {/* <Typography sx={{ color: '#DFE0EB', fontSize: "30px", textAlign: 'center', padding: '0 15px' }}>|</Typography> */}
+                            <Box className={classes.profile}>
+                                <Typography className={classes.name}>FirstName LastName</Typography>
+                                <Avatar>OP</Avatar>
+                            </Box>
+                        </Box>
+
                         <ClickAwayListener onClickAway={handleCloseMenu}>
                             <Box className={classes.menuBox}>
                                 <IconButton
@@ -90,7 +106,7 @@ export default function Navbar() {
                                     aria-label="account of current user"
                                     aria-controls="menu-appbar"
                                     onClick={handleOpenMenu}
-                                    color="inherit"
+                                    color="primary"
 
                                 >
                                     <MenuIcon />
@@ -125,46 +141,9 @@ export default function Navbar() {
                                             </Link>
                                         </MenuItem>
                                     ))}
-
-                                    <MenuItem>
-                                        <Link key="register" href={"https://docs.google.com/forms/d/e/1FAIpQLScwJ8LUYJEkTLZSNS7uGVm63E-hrQH2Snqocp2zUcWuS8dF2w/viewform"} target="_blank" passHref>
-                                            <a rel="noreferrer" style={{
-                                                textDecoration: 'none',
-                                                color: '#000'
-                                            }}>
-                                                <Typography>Register</Typography>
-                                            </a>
-                                        </Link>
-                                    </MenuItem>
-                                    <MenuItem>
-                                        <Link key="contact_us" href={"mailto:reflectionsprojections@gmail.com"} passHref>
-                                            <a rel="noreferrer" style={{
-                                                textDecoration: 'none',
-                                                color: '#000'
-                                            }}>
-                                                <Typography>Contact Us</Typography>
-                                            </a>
-                                        </Link>
-                                    </MenuItem>
                                 </Menu>
                             </Box>
                         </ClickAwayListener>
-
-                        <Box className={classes.util}>
-                            <Box className={classes.tools}>
-                                <a rel="noreferrer">
-                                    <img src="/assets/search.png" alt='search' />
-                                </a>
-                                <a rel="noreferrer">
-                                    <img src="/assets/new.png" alt='notifications' />
-                                </a>
-                            </Box>
-                            <Typography sx={{ color: '#DFE0EB', fontSize: "30px", textAlign: 'center', padding: '0 15px' }}>|</Typography>
-                            <Box className={classes.profile}>
-                                <Typography sx={{ color: 'black', textAlign: 'center' }}>FirstName LastName</Typography>
-                                <Avatar>OP</Avatar>
-                            </Box>
-                        </Box>
                     </Toolbar>
                 </Container>
             </AppBar>
