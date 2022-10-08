@@ -2,10 +2,10 @@ const express = require('express');
 const router = express.Router();
 const Courses = require('../models/courses');
 const Quizzes = require('../models/quizzes');
-const UserCourses = require('../models/user-courses');
+// const UserCourses = require('../models/user-courses');
 const Pages = require('../models/pages');
 const Comments = require('../models/comments');
-const QuizResults = require('../models/quiz-results');
+// const QuizResults = require('../models/quiz-results');
 const { validateToken } = require("../utils/tokens");
 
 
@@ -65,7 +65,5 @@ router.post('/location', async (req, res) => {
     console.log(progress);
     return res.status(200).json({token, progress});
 });
-
-
 
 module.exports = router;
