@@ -54,17 +54,25 @@ router.put('/progress', async (req, res) => {
 
 router.put('/location', async (req, res) => {
     req.decoded = validateToken(req.body.token);
-    var progress = await users.setLocation(req.body);
+    var location = await users.setLocation(req.body);
     console.log(progress);
-    return res.status(200).json({token, progress});
+    return res.status(200).json({token, location});
 });
 
 router.post('/location', async (req, res) => {
     req.decoded = validateToken(req.body.token);
-    var progress = await users.setLocation(req.body);
+    var location = await users.setLocation(req.body);
     console.log(progress);
-    return res.status(200).json({token, progress});
+    return res.status(200).json({token, location});
 });
+
+router.post('/quiz-try', async (req, res) => {
+    req.decoded = validateToken(req.body.token);
+    var quizAttempt = await quizzes.quizTry(req.body);
+    console.log(progress);
+    return res.status(200).json({token, quizAttempt});
+});
+
 
 
 
