@@ -3,6 +3,7 @@
     color: white;
     border-radius: 10px;
     display: flex;
+    box-shadow: 5px 10px #e4e8ed;
 }
 
 .CommunityPost .image{
