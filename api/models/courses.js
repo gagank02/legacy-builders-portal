@@ -14,7 +14,7 @@ class Course {
     }
     
     static async setProgress(userID, progress) {
-        return await db.query('UPDATE user_courses SET progress = ($1) WHERE user_id = ($2)', progress, userID);
+        return await db.query('UPDATE user_courses SET progress = ($1) WHERE user_id = ($2) RETURNING id, user_id, course_id, progress', progress, userID);
     }
 }
 

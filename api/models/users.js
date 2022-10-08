@@ -114,7 +114,7 @@ class User {
     }
 
     static async setLocation(userID, location) {
-        return await db.query('UPDATE users SET location = ($1) WHERE user_id = ($2)', location, userID);
+        return await db.query('UPDATE users SET location = ($1) WHERE user_id = ($2) RETURNING username, first_name, last_name, email, created_at, location;', location, userID);
     }
 }
 
