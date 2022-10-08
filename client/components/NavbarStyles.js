@@ -5,7 +5,7 @@ const mobile = '420px';
 
 const useStyles = makeStyles({
     header: {
-        position: 'fixed',
+        position: 'static',
         width: '100%',
         zIndex: 5,
 
@@ -71,7 +71,7 @@ const useStyles = makeStyles({
         flexGrow: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        paddingLeft: '10rem',
+        paddingRight: '20rem',
 
         ['@media (max-width: 1000px)']: {
             display: 'none',
