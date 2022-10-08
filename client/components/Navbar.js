@@ -15,8 +15,8 @@ export default function Navbar() {
             href: '/learn'
         },
         {
-            label: 'Forum',
-            href: '/forum'
+            label: 'Community',
+            href: '/Community'
         },
         {
             label: 'Resources',
@@ -74,17 +74,17 @@ export default function Navbar() {
                         </Box>
 
                         <Box className={classes.util}>
-                            <Box className={classes.tools}>
+                            {/* <Box className={classes.tools}>
                                 <a rel="noreferrer">
                                     <img src="/assets/search.png" alt='search' />
                                 </a>
                                 <a rel="noreferrer">
                                     <img src="/assets/new.png" alt='notifications' />
                                 </a>
-                            </Box>
-                            <Typography sx={{ color: '#DFE0EB', fontSize: "30px", textAlign: 'center', padding: '0 15px' }}>|</Typography>
+                            </Box> */}
+                            {/* <Typography sx={{ color: '#DFE0EB', fontSize: "30px", textAlign: 'center', padding: '0 15px' }}>|</Typography> */}
                             <Box className={classes.profile}>
-                                <Typography sx={{ color: 'black', textAlign: 'center' }}>FirstName LastName</Typography>
+                            <Typography className={classes.name}>FirstName LastName</Typography>
                             <IconButton
                                 size="large"
                                 aria-label="account of current user"
@@ -98,6 +98,52 @@ export default function Navbar() {
                             </IconButton>
                             </Box>
                         </Box>
+
+                        <ClickAwayListener onClickAway={handleCloseMenu}>
+                            <Box className={classes.menuBox}>
+                                <IconButton
+                                    size="large"
+                                    aria-label="account of current user"
+                                    aria-controls="menu-appbar"
+                                    onClick={handleOpenMenu}
+                                    color="primary"
+
+                                >
+                                    <MenuIcon />
+                                </IconButton>
+                                <Menu
+                                    id="menu-appbar"
+                                    anchorEl={needsMenu}
+                                    anchorOrigin={{
+                                        vertical: 'bottom',
+                                        horizontal: 'left',
+                                    }}
+                                    keepMounted
+                                    transformOrigin={{
+                                        vertical: 'top',
+                                        horizontal: 'left',
+                                    }}
+                                    open={Boolean(needsMenu)}
+                                    onClose={handleCloseMenu}
+                                    className={classes.menu}
+                                >
+                                    {pagesData.map(({ label, href }) => (
+                                        <MenuItem>
+                                            <Link key={label} href={href} passHref>
+                                                <a rel="noreferrer" style={{
+                                                    textDecoration: 'none',
+                                                    color: '#000'
+                                                }}>
+                                                    <Typography>
+                                                        {label}
+                                                    </Typography>
+                                                </a>
+                                            </Link>
+                                        </MenuItem>
+                                    ))}
+                                </Menu>
+                            </Box>
+                        </ClickAwayListener>
                     </Toolbar>
                 </Container>
             </AppBar>

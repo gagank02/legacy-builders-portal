@@ -4,8 +4,13 @@ const tablet = '850px';
 const mobile = '420px';
 
 const useStyles = makeStyles({
+    root: {
+        width: '100%',
+        height: '100%',
+    },
+
     header: {
-        position: 'static',
+        position: 'relative',
         width: '100%',
         zIndex: 5,
 
@@ -15,7 +20,11 @@ const useStyles = makeStyles({
         boxShadow: 'none',
         top: 0,
         left: 0,
-        // border: 'red 3px solid'
+        // border: 'red 3px solid',
+
+        [`@media (max-width: ${mobile})`]: {
+            padding: 0
+        },
     },
 
     sidebarOpener: {
@@ -35,7 +44,7 @@ const useStyles = makeStyles({
     wordsLogo: {
         position: 'static',
         paddingTop: '15px',
-    
+        width: '225px',
 
         [`@media (max-width: ${mobile})`]: {
             display: 'none'
@@ -49,14 +58,16 @@ const useStyles = makeStyles({
 
     logo: {
         position: 'static',
-        width: '77px',
-        height: '78px',
+        width: '55px',
+        height: '55px',
         left: '0px',
         top: '0px',
 
         [`@media (max-width: ${mobile})`]: {
-            width: '60px',
-            height: '60px',
+            width: '50px',
+            height: '50px',
+            left: 0,
+            position: 'absolute'
         },
 
         flex: 'none',
@@ -106,7 +117,7 @@ const useStyles = makeStyles({
         textDecoration: 'none',
         borderBottom: "3px solid",
         cursor: 'pointer',
-        color: 'white',
+        color: 'black',
         marginLeft: '38px',
         fontFamily: 'Roboto',
         fontStyle: 'normal',
@@ -117,7 +128,7 @@ const useStyles = makeStyles({
             textDecoration: 'none',
             borderBottom: "3px solid",
             cursor: 'pointer',
-            color: 'white',
+            color: 'black',
             marginLeft: '38px',
             fontFamily: 'Roboto',
             fontStyle: 'normal',
@@ -188,6 +199,14 @@ const useStyles = makeStyles({
         }
     },
 
+    name: {
+        color: 'black', 
+        textAlign: 'center',
+        [`@media (max-width: ${mobile})`]: {
+            display: 'none'
+        },
+    },
+
     floatCon: {
         float: 'right'
     },
@@ -213,11 +232,17 @@ const useStyles = makeStyles({
     },
 
     profile: {
+        position: 'relative',
         display: 'flex',
         flexDirection: "row",
         justifyContent: 'center',
         alignItems: 'center',
-        gap: '15px'
+        gap: '15px',
+
+        [`@media (max-width: ${mobile})`]: {
+            right: '50px'
+        },
+        
     }
 }, { index: 1 });
 
