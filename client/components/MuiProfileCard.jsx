@@ -12,17 +12,29 @@ import MuiInformationTable from './MuiInformationTable';
 
 export default function MuiProfileCard({userName, email, location, courses}) {
   return (
-    <Card sx={{ width: "65vw"}}>
+    <Card sx={{ width: "65vw", height: "32vh"}}>
     <CardContent>
-        <h3>First Last</h3>
-          Profile Information
+        <h2>First Last</h2>
+          <p style = {{paddingLeft: "5vw"}}>Profile Information:</p>
         {/* <MuiInformationTable userName={userName} email = {email} location = {location} /> */}
+        
+        <div style = {{position: "absolute", float: "left", paddingLeft: "5vw"}}>
         <ul style={{ }}>
-            <li>Username: {userName}</li>
-            <li>Email: {email}</li>
-            <li>Location: {location}</li>
+          <p>Username:</p>
+          <p>Email: </p>
+          <p>Location:</p>
         </ul>
+        </div>
+        <div style = {{ float: "right", paddingRight: "10vw"}}>
+   
+        <ul style={{ }}>
+          <p>{userName}</p>
+          <p>{email} </p>
+          <p>{location}</p>
+        </ul>
+        </div>
     </CardContent>
+    <br></br><br></br><br></br><br></br><br></br>
     <CardActions>
       <Button size="small">Edit</Button>
     </CardActions>
