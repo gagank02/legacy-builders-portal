@@ -2,10 +2,13 @@ import { useState } from "react";
 import MuiSubmitButton from "../components/MuiSubmitButton";
 import MuiSignin from "../components/MuiSignin";
 
-const SignIn = () => {
+const Register = () => {
     
     const [userName, setUserName] = useState('');
     const [password, setPassword] = useState('');
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [email, setEmail] = useState('');
     
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -30,7 +33,7 @@ const SignIn = () => {
                 <img src="/assets/raf_logo.png"></img>
             </div>
             <br></br>
-            <p>Please sign in using your username and password below.</p>
+            <p>Please fill out the fields below.</p>
         
         <div className="form">
                 <form>
@@ -42,7 +45,21 @@ const SignIn = () => {
                     <div className="input-container">
                         <label>Password: </label>
                         <input type="password" name="pass" value={password} required onChange={(e) => setPassword(e.target.value)}/>
-                    
+                    </div>
+                    <br></br>
+                    <div className="input-container">
+                        <label>First Name: </label>
+                        <input type="first name" name="pass" value={firstName} required onChange={(e) => setPassword(e.target.value)}/>
+                    </div>
+                    <br></br>
+                    <div className="input-container">
+                        <label>Last Name: </label>
+                        <input type="last name" name="pass" value={lastName} required onChange={(e) => setPassword(e.target.value)}/>
+                    </div>
+                    <br></br>
+                    <div className="input-container">
+                        <label>Email: </label>
+                        <input type="email" name="pass" value={email} required onChange={(e) => setPassword(e.target.value)}/>
                     </div>
                     <br></br>
                     </form>
@@ -59,4 +76,4 @@ const SignIn = () => {
      );
 }
  
-export default SignIn;
+export default Register;
