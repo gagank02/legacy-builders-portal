@@ -38,9 +38,9 @@ const CreateBar = ({header, firstName, lastName}) => {
     <>
     <div className='CreateBar'>
       <form>
-        <input type="text" placeholder='Placeholder'></input>
+        <input className='textField' type="text" placeholder="Share what's on you mind..."></input>
         <div className='button'>
-          <input type='submit'></input>
+          <input type='submit' value='Create'></input>
         </div>
       </form>
     </div>
