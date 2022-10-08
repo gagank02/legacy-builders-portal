@@ -9,22 +9,42 @@ import MuiButton from './MuiButton';
 
 export default function MuiNearbyCard() {
     return (
-      <Card sx={{ width: "45vw"}}>
+        <>
+      <Card sx={{ width: "30vw"}}>
         <CardContent>
           <Typography sx={{ fontSize: 20 }} color="text" gutterBottom>
             <h1>Free resources nearby!</h1>
           </Typography>
-          <Typography sx={{ fontSize: 17 }} color="text" gutterBottom>
-            <h4>Location:</h4>
+
+          <Typography sx={{ fontSize: 12 }} color="text-secondary" gutterBottom>
+            <h1>Wifi and access to computers:</h1>
           </Typography>
-          <Typography sx={{ fontSize: 17 }} color="text-secondary" gutterBottom>
-            
-          </Typography>
+
+            <ul>
+                <li>
+                <Typography sx={{ fontSize: 17 }} color="text" gutterBottom>
+                    <p>Harold Washington Library Center</p> 
+                </Typography>
+                </li>
+                <li>
+                <Typography sx={{ fontSize: 17 }} color="text" gutterBottom>
+                    <p>Richard J. Daley Branch, Chicago Public Library</p>
+                </Typography>
+                </li>
+                <li>
+                <Typography sx={{ fontSize: 17 }} color="text" gutterBottom>
+                    <p>Chicago Lawn Branch, Chicago Public Library</p>
+                </Typography>
+                </li>
+            </ul>
+
+          <Button sx={{textDecoration: "underline"}}>Directions</Button>
          
         </CardContent>
         <CardActions>
           <Button size="small"></Button>
         </CardActions>
       </Card>
+      </>
     );
   }
