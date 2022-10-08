@@ -37,8 +37,7 @@ const CommunityPost = ({title}) => {
           <div className="input-container">
               <label>Title: </label>
               <input type="text" value={title} required />
-          </div>
-
+          
           <br></br>
           
           <label>Tag:</label>
@@ -47,15 +46,18 @@ const CommunityPost = ({title}) => {
                   <option value="Payment">Payment</option>
                   <option value="Traffic">Traffic</option>
           </select>
+          </div>
 
           <br></br>
           <br></br>
 
+          <div className='bottom-container'>
           <label>Post content:</label>
               <textarea required
                   value={content}
                   onChange={(e) => setContent(e.target.value)}
               ></textarea>
+            </div>
 
           </form>
       <div className = "submitButton">

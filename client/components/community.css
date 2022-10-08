@@ -41,6 +41,7 @@
     height: 35px;
     width: 400px;
     margin-left: 35%;
+    margin-top: 150px;
 }
 
 .CreateBar .button{
@@ -63,6 +64,25 @@
     float: center;
     margin-left: 35%;
     padding-top: 3px;
+}
+
+.communityPost .input-container{
+    float: left;
+    display: flex;
+    padding-left: 10px;
+    gap: 10px;
+}
+
+.communityPost .bottom-container{
+    float: left;
+    padding-left: 10px;
+    position: relative;
+}
+
+.communityPost .submitButton{
+    position: absolute;
+    padding-left: 40%;
+    padding-top: 65px;
 }
 
 @media screen and (max-width: 420px) {
