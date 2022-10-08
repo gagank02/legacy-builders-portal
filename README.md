@@ -1,11 +1,11 @@
-# Legacy Builders Portal<br><sup>A JPMorgan Chase & Co. `code for <good>` project.</sup>
+# Legacy Builders Portal<br><sup>A JPMorgan Chase & Co. `code for <good>` [project](https://codeforgood.bemyapp.com/#/projects/634194abfb518d69381558d9).</sup>
 How can help [Refined and Refreshed](https://www.refinedrefreshedinc.org/) expand their current virtual educational services to be **more engaging and accessible** for low-income individuals? How can a tool help an individual along a learning journey to **meet them where they are at and encourage continuous learning and growth**? How can this tool keep people **engaged and interested in a virtual model** and **incentivizes people to continue with the educational tools**?
 
 ## Tech Stack
  - PostgreSQL
  - Express
- - Node
- - Next.js
+ - React
+ - Node.js
 
 ## ERD
 ![ERD of API](https://github.com/cfgchicago22/team-2/blob/main/ERD%20API.png)

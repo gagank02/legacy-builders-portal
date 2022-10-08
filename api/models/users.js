@@ -27,7 +27,6 @@ class User {
         return user;
     }
 
-
     static async makePublicUser(user) {
         return {
             id: user.id,
@@ -36,7 +35,7 @@ class User {
             lastName: user.last_name,
             email: user.email,
             createdAt: user.created_at,
-            location: user.location
+            location: user.location,
         };
     }
 
@@ -113,8 +112,17 @@ class User {
         throw new UnauthorizedError("Invalid username or password");
     }
 
-    static async setLocation(userID, location) {
-        return await db.query('UPDATE users SET location = ($1) WHERE user_id = ($2) RETURNING username, first_name, last_name, email, created_at, location;', location, userID);
+    static async setLocation(values, email) {
+        console.log(email);
+
+        let results = await db.query(
+            `
+            update users set location = $1 where email = $2 returning *;
+            `,
+            [values.location, email]
+        );
+        console.log(results);
+        return User.makePublicUser(results.rows[0]);
     }
 }
 
