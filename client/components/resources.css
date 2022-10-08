@@ -27,10 +27,14 @@
         padding-left: 10px;
         display: inline;
         float: center;
+        width: auto;
     }
 
-    .css-1gp1lk7-MuiPaper-root-MuiCard-root {
+    .resource .cards .card1[width]{
         width: 95vw !important;
     }
 
+    .css-1gp1lk7-MuiPaper-root-MuiCard-root{
+        width: 95vw !important;
+    }
 }
