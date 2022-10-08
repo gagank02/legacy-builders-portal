@@ -13,7 +13,7 @@ const Webinar = () => {
 
   
             <MuiTableComments/>
-==
+
         </>
      );
 } 
