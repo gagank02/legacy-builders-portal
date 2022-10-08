@@ -30,14 +30,14 @@ router.get('/quizzes', async (req, res) => {
     return res.status(200).json({token, quiz});
 })
 
-router.post('/pages', async (req, res) => {
+router.get('/pages', async (req, res) => {
     req.decoded = validateToken(req.body.token);
     var page = await Pages.getPage(req.body);
     console.log(page);     
     return res.status(200).json({token, page});
 })
 
-router.post('/comments', async (req, res) => {
+router.get('/comments', async (req, res) => {
     req.decoded = validateToken(req.body.token);
     var comment = await Comments.getComment(req.body);
     console.log(comment);
