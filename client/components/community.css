@@ -40,7 +40,7 @@
     text-align: center;
     height: 35px;
     width: 400px;
-    margin-left: 550px;
+    margin-left: 35%;
 }
 
 .CreateBar .button{
@@ -50,4 +50,17 @@
 
 .CreateBar .textField{
     width: 300px;
+}
+
+.communityPost {
+    background-color: #8AC343;
+    color: white;
+    width: 400px;
+    height: 250px;
+    text-align: center;
+    border-radius: 15px;
+    position: relative;
+    float: center;
+    margin-left: 35%;
+    padding-top: 3px;
 }

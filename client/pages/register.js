@@ -57,12 +57,12 @@ const Register = () => {
         <div className="form">
                 <form>
                     <div className="input-container">
-                        <label>Username: </label>
+                        <label>Username: </label><br></br>
                         <input type="text" name="uname" value={userName} required onChange={(e) => setUserName(e.target.value)} />
                     </div>
                     <br></br>
                     <div className="input-container">
-                        <label>Password: </label>
+                        <label>Password: </label><br></br>
                         <input type="password" name="pass" value={password} required onChange={(e) => setPassword(e.target.value)}/>
                     </div>
                     <br></br>
