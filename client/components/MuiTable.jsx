@@ -27,7 +27,7 @@ export default function MuiTable() {
         <TableHead>
           <TableRow>
             <TableCell><h1>Lessons to Complete</h1></TableCell>
-            <TableCell align="right"><h1>Time</h1></TableCell>
+            <TableCell align="right"><h1>Time Length</h1></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
