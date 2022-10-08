@@ -3,8 +3,8 @@ body{
 }
 
 .welcome {
-    padding-left: 80px;
-    padding-right: 40px;
+    padding-left: 5vw;
+    padding-right: 5vw;
 }
 /* .home-content {
     position: relative;
@@ -38,13 +38,15 @@ body{
     margin: 1rem;
     padding: 2rem 2rem;
     text-align: center;
+    padding-left: 20 vw;
     
   }
   .child {
     display: inline-block;
-    padding: 1rem 1rem;
+    padding: 5vh 5vh 5vw 5vw;
     vertical-align: middle;
     text-align: center;
+    /* padding-left: 20 vw; */
   }
 
   .css-s3sxxk-MuiPaper-root-MuiCard-root {
@@ -56,4 +58,14 @@ body{
     box-shadow: 0px 2px 1px -1pxrgba(0,0,0,0.2),0px 1px 1px 0pxrgba(0,0,0,0.14),0px 1px 3px 0pxrgba(0,0,0,0.12);
     overflow: hidden;
     width: 87vw;
+}
+
+@media screen and (max-width: 420px)
+{
+    .css-1ig0swr-MuiPaper-root-MuiCard-root {
+        width: 80vw;
+    }
+    .css-nmbwc3-MuiTable-root {
+        width: 80vw;
+    }
 }

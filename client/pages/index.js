@@ -21,10 +21,10 @@ export default function Home() {
           <div className = 'child'>
             <MuiTable/>
           </div>
-          <div className = 'child'>
+          <div className = 'child' >
             <MuiCard header = "Your Progress" info = "70% finished" size = "30vw" img="/assets/progress bar.png"/>
             <br></br>
-            <MuiNextWebinar header = "Your Next Webinar:" info= "Tomorrow, 3 pm CST" url = "https://urllink.com" />
+            <MuiNextWebinar header = "Your Next Webinar:" info= "Tomorrow, 3 pm CST" url = "https://urllink.com" size = "30vw" />
           </div>
         </div>
       </>

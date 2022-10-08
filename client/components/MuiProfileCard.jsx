@@ -12,7 +12,7 @@ import MuiInformationTable from './MuiInformationTable';
 
 export default function MuiProfileCard({userName, email, location, courses}) {
   return (
-    <Card sx={{ width: "65vw", height: "32vh"}}>
+    <Card sx={{ width: "65vw", height: "31.5vh"}}>
     <CardContent>
         <h2>First Last</h2>
           <p style = {{paddingLeft: "5vw"}}>Profile Information:</p>

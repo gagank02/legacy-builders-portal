@@ -19,6 +19,7 @@ const bull = (
 export default function MuiNextWebinar({header, info, size, url}) {
   return (
     <Card sx={{ width: size}}>
+            
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
           
