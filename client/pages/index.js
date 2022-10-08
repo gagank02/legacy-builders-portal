@@ -6,10 +6,15 @@ import MuiTable from '../components/MuiTable.jsx'
 import MuiButton from '../components/MuiButton'
 import MuiDashboard from '../components/MuiDashboard'
 import MuiNextWebinar from '../components/MuiNextWebinar'
-
-
+import {useEffect} from "react";
 
 export default function Home() {
+  useEffect(() => {
+    if (!localStorage.getItem('token')) {
+      window.location = '/login';
+    }
+  });
+
   return (
       <>
         <Navbar />
