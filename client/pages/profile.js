@@ -3,14 +3,16 @@ import { AppBar, Box, Button, ClickAwayListener, Container, IconButton, Menu, Me
 import MuiTable from '../components/MuiTable';
 import MuiCard from '../components/MuiCard';
 import MuiAvatar from '../components/MuiAvatar'
+import MuiProfileTable from '../components/MuiProfileTable'
 
 const Profile = () => {
     return ( 
         <>
             <Navbar />
             <div className="profile-header">
-                <MuiAvatar></MuiAvatar>
-                <MuiCard header="Profile Information"><p>hello</p></MuiCard>
+                <MuiAvatar sx={{marginLeft: '100px'}} first="First" last="Last"></MuiAvatar>
+                <br></br>
+                <MuiProfileTable userName="Matthew1234" email="mwhyte3602@gmail.com" location='Chicago, Illinois' courses='Courses'></MuiProfileTable>
             </div>
         </>
      );
