@@ -113,9 +113,9 @@ export default function Community() {
   const [title, setTitle] = useState('');
   const [showCreatePost, setShowCreatePost] = useState(false);
   const [posts, setPosts] = useState([
-    {header:'Blockchain developers best practices on innovation chain', firstName:'first', lastName:'last', tag:'Finance'},
-    {header:'OnePay - Online Payment Processing App', firstName:'another', lastName:'name', tag:'Payment'},
-    {header:'The 4-step SEO framework that led to a 1000% increase in traffic', firstName:'something', lastName:'else', tag:'Traffic'}
+    {header:'Blockchain developers best practices on innovation chain', firstName:'Jane', lastName:'Doe', tag:'Finance'},
+    {header:'OnePay - Online Payment Processing App', firstName:'Tom', lastName:'Smith', tag:'Payment'},
+    {header:'The 4-step SEO framework that led to a 1000% increase in traffic', firstName:'John', lastName:'Morgan', tag:'Traffic'}
   ]
   );
 
