@@ -33,11 +33,6 @@ users.signUp = async (req, res) => {
 };
 
 users.logIn = async (req, res) => {
-    if (req.body.loggedIn) {
-        console.log("User already logged in");
-        return;
-    }
-    tokens.generateToken()
     const hash = bcrypt.hashSync(req.body.password, saltRounds);
     const values = [req.body.userName, hash];
 
