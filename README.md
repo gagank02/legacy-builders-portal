@@ -4,8 +4,11 @@ How can help [Refined and Refreshed](https://www.refinedrefreshedinc.org/) expan
 ## Tech Stack
  - PostgreSQL
  - Express
- - Next.js
  - Node
+ - Next.js
+
+## ERD
+![ERD of API](https://github.com/cfgchicago22/team-2/blob/main/ERD%20API.png)
 
 
 # Setup
