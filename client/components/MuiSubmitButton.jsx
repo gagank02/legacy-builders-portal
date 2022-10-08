@@ -8,7 +8,7 @@ export default function MuiSubmitButton({desc, onClick}) {
     
     <Stack float="center" width="30px">
       <Button variant="contained" >Submit</Button>
-      <Button variant="contained" onClick={onClick}>Submit</Button>
+      <Button variant="contained" onClick={onClick} href="/">Submit</Button>
       
     </Stack>
   );
