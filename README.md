@@ -10,16 +10,19 @@ How can help [Refined and Refreshed](https://www.refinedrefreshedinc.org/) expan
 
 # Setup
  1. To initialize database, use api/.env.template to create your own .env file.
- 2. 
- 3. 
- 4. 
+ 2. Execute npm start at api/ to start server 
+ 3. Open localhost:[port#] in browser to visit site!
 
 
 ## Contributors
- - Person1
- - Person2
- - Person3
- - Person4
- - Person5
- - Person6
- - Person7
+Front-end:
+- Bianca Jankiewicz, University of Illinois Chicago
+- Evie Lee, Duke University
+- Gagan Kadadevarmath, University of Illinois at Urbana-Champaign
+- Matt Whyte, Michigan State University
+
+Back-end:
+- Andrew Kim, University of Missouri
+- Caleb Alexander, Miami of Ohio
+- Daniel Jonas, Florida International University
+
