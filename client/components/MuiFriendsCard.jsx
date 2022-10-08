@@ -11,7 +11,7 @@ import { blue } from '@mui/material/colors';
 
 export default function MuiFriendsCard() {
   return (
-    <Card sx={{ width: "30vw", height: "35.5vh",}}>
+    <Card sx={{ width: "30vw", height: "35vh",}}>
     <CardContent>
       {/* <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
         

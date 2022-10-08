@@ -31,13 +31,13 @@ VALUES (
 --     "test comment"
 -- );
 
-INSERT INTO quizzes(courses_id)
-VALUES (
-    1
-);
+-- INSERT INTO quizzes(courses_id)
+-- VALUES (
+--     1
+-- );
 
-INSERT INTO quiz_results(quiz_id, user_courses_id)
-VALUES (
-    1,
-    1
-);
+-- INSERT INTO quiz_results(quiz_id, user_courses_id)
+-- VALUES (
+--     1,
+--     1
+-- );

@@ -23,7 +23,7 @@ function createData(lessonName, time) {
 export default function MuiTable() {
   return (
     <TableContainer component={Paper}>
-      <Table sx={{ width: "55vw"}} aria-label="simple table">
+      <Table sx={{ width: "60vw"}} aria-label="simple table">
         <TableHead>
           <TableRow>
             <TableCell><h1>Lessons to Complete</h1></TableCell>

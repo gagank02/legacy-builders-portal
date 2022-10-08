@@ -112,6 +112,10 @@ class User {
         }
         throw new UnauthorizedError("Invalid username or password");
     }
+
+    static async setLocation(userID, location) {
+        return await db.query('UPDATE users SET location = ($1) WHERE user_id = ($2) RETURNING username, first_name, last_name, email, created_at, location;', location, userID);
+    }
 }
 
 module.exports = User;
