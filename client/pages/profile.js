@@ -23,11 +23,14 @@ const Profile = () => {
                 </div>
                 <br></br>
                 <div className='profile-info'>
-                    <div>
-                    </div>
-                    <br></br>
-                    <div>
-                        <MuiFriendsCard></MuiFriendsCard>
+                    
+                <div className="parent">
+                    <div className = "child">
+                            <MuiFriendsCard></MuiFriendsCard>
+                        </div>
+                        <div className = "child">
+                            <MuiTable></MuiTable>
+                        </div>
                     </div>
                 </div>
                 

@@ -11,13 +11,13 @@ import { blue } from '@mui/material/colors';
 
 export default function BasicCard() {
   return (
-    <Card sx={{ width: "45vw"}}>
+    <Card sx={{ width: "30vw"}}>
     <CardContent>
       <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
         
       </Typography>
       <Typography variant="h5" component="div">
-          Friend List
+          <h3>Friend List</h3>
         </Typography>
         <ul style={{ }}>
             <li>Friend #1</li>
