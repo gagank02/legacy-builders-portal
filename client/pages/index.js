@@ -22,7 +22,7 @@ export default function Home() {
             <MuiTable/>
           </div>
           <div className = 'child'>
-            <MuiCard header = "Your Progress" info = "70% finished" size = "30vw" img="/assets/progress bar.png"/>
+            <MuiCard header = "Your Progress" info = "70% finished" text-align = "center" size = "30vw" img="/assets/progress bar.png"/>
             <br></br>
             <MuiNextWebinar header = "Your Next Webinar:" info= "Tomorrow, 3 pm CST" url = "https://urllink.com" />
           </div>
