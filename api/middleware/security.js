@@ -3,14 +3,7 @@ const { SECRET_KEY } = require("../config");
 const { UnauthorizedError } = require("../utils/errors");
 
 const jwtFrom = ({ headers }) => {
-    console.log(headers);
-    console.log(headers.host);
-    console.log(headers["user-agent"]);
-    console.log(headers["authorization"]);
-    // console.log(headers["authorization"]);
-    // console.log(headers.authorization);
     if (headers?.authorization) {
-
         const [scheme, token] = headers.authorization.split(" ");
         if (scheme.trim() === "Bearer") {
             return token;
