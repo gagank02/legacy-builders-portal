@@ -8,6 +8,7 @@ CREATE DATABASE cfgchicago22;
 
 \i cfgchicago22_schema.sql
 
+\i cfgchicago22-seed.sql
 
 
 
