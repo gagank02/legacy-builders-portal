@@ -67,17 +67,17 @@ const Register = () => {
                     </div>
                     <br></br>
                     <div className="input-container">
-                        <label>First Name: </label>
+                        <label>First Name: </label><br></br>
                         <input type="first name" name="pass" value={firstName} required onChange={(e) => setFirstName(e.target.value)}/>
                     </div>
                     <br></br>
                     <div className="input-container">
-                        <label>Last Name: </label>
+                        <label>Last Name: </label><br></br>
                         <input type="last name" name="pass" value={lastName} required onChange={(e) => setLastName(e.target.value)}/>
                     </div>
                     <br></br>
                     <div className="input-container">
-                        <label>Email: </label>
+                        <label>Email: </label><br></br>
                         <input type="email" name="pass" value={email} required onChange={(e) => setEmail(e.target.value)}/>
                     </div>
                     <br></br>
