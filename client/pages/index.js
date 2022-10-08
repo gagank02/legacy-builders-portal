@@ -14,7 +14,7 @@ export default function Home() {
       <>
         <Navbar />
         <div className = 'welcome'>
-            <MuiDashboard header = "Welcome to Legacy Builders!" info = "Here is your dashboard, where you can see all your classes and all your progress at a glance." size = "87vw" desc= "Resume your Progress"> </MuiDashboard>
+            <MuiDashboard header = "Welcome to Legacy Builders!" info = "Here is your dashboard, where you can see all your classes and your progress at a glance." size = "87vw" desc= "Resume your Progress"> </MuiDashboard>
         </div>
         
         <div className = 'parent'>

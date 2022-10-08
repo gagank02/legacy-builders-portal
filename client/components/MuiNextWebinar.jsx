@@ -27,7 +27,7 @@ export default function MuiNextWebinar({header, info, size, url}) {
           
           {header}
         </Typography>
-        <Typography sx={{ mb: 1.5 }} color="text.secondary">
+        <Typography sx={{ }} color="text.secondary">
           {info}
         </Typography>
         <Typography variant="body2">

@@ -26,7 +26,7 @@ export default function MuiTable() {
       <Table sx={{ width: "55vw"}} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell><h1>Lessons</h1></TableCell>
+            <TableCell><h1>Lessons to Complete</h1></TableCell>
             <TableCell align="right"><h1>Time</h1></TableCell>
           </TableRow>
         </TableHead>
