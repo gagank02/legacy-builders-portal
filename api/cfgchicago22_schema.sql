@@ -45,5 +45,6 @@ CREATE TABLE quiz_results (
     id                      SERIAL PRIMARY KEY,
     quiz_id                 INTEGER NOT NULL REFERENCES quizzes(id),
     user_courses_id         INTEGER NOT NULL REFERENCES user_courses(id),
-    quiz_score              INTEGER 
+    quiz_score              INTEGER,
+    number_retries          INTEGER NOT NULL DEFAULT 0 
 );
