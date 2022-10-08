@@ -68,10 +68,6 @@ const Register = () => {
                 </div>
             </div>
         </div>
-        <center>
-            <p>Don't have an account?</p> 
-            <a href="/register">Create one here</a>
-        </center>
         </>
      );
 }
