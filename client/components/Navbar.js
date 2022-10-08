@@ -49,7 +49,7 @@ export default function Navbar() {
             headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
         }
 
-        /*axios.get(`${API_URL}/auth/me`, config)
+        axios.get(`${API_URL}/auth/me`, config)
             .then(function (res) {
                 console.log(res);
                 let data = res.data.user;
@@ -59,7 +59,7 @@ export default function Navbar() {
             .catch(function (err) {
                 console.log(err);
                 window.location.href = '/login'
-            });*/
+            });
     }, [])
 
     function logout() {

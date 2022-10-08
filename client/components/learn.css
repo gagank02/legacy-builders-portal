@@ -49,6 +49,7 @@ h3 {
 
 .searchbar {
     order: 2;
+    width: 100%;
 }
 
 .lessons {
@@ -58,6 +59,7 @@ h3 {
     flex-direction: row;
     justify-content: center;
     gap: 25px;
+    width: 100%;
     /* border: red 3px solid; */
 }
 
