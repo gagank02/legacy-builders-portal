@@ -16,23 +16,27 @@ const bull = (
   </Box>
 );
 
-export default function MuiCard({header, info, size, img}) {
+export default function MuiCard({ header, info, size, img }) {
   return (
-    <Card sx={{ width: size}}>
+    <Card sx={{
+      width: size, ['@media (max-width: 420px)']: {
+        width: "100%",
+      },
+    }}>
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-          
+
         </Typography>
         <Typography variant="h5" component="div" color="rgb(40, 68, 146)">
-          
+
           {header}
         </Typography>
-        <Typography sx={{  }} color="text.secondary">
+        <Typography sx={{}} color="text.secondary">
           {info}
         </Typography>
         <Typography variant="body2">
-          <img src={img} width = "90%" />
-        
+          <img src={img} width="90%" />
+
         </Typography>
       </CardContent>
       <CardActions>

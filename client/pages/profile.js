@@ -43,8 +43,10 @@ const Profile = () => {
 
     return (
         <>
-            <div className="container">
-                <Navbar />
+            <Navbar />
+            <div>
+                <br></br>
+                <br></br>
                 <div className="profile">
 
                     <div className="parent">

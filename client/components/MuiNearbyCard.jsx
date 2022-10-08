@@ -8,9 +8,13 @@ import Typography from '@mui/material/Typography';
 import MuiButton from './MuiButton';
 
 export default function MuiNearbyCard() {
-    return (
-        <>
-      <Card sx={{ width: "30vw"}}>
+  return (
+    <>
+      <Card sx={{
+        width: "100%", textAlign: "center", ['@media (max-width: 420px)']: {
+          width: '100%',
+        },
+      }}>
         <CardContent>
           <Typography sx={{ fontSize: 20 }} color="text" gutterBottom>
             <h1>Free resources nearby!</h1>
@@ -20,31 +24,31 @@ export default function MuiNearbyCard() {
             <h1>Wifi and access to computers:</h1>
           </Typography>
 
-            <ul>
-                <li>
-                <Typography sx={{ fontSize: 17 }} color="text" gutterBottom>
-                    <p>Harold Washington Library Center</p> 
-                </Typography>
-                </li>
-                <li>
-                <Typography sx={{ fontSize: 17 }} color="text" gutterBottom>
-                    <p>Richard J. Daley Branch, Chicago Public Library</p>
-                </Typography>
-                </li>
-                <li>
-                <Typography sx={{ fontSize: 17 }} color="text" gutterBottom>
-                    <p>Chicago Lawn Branch, Chicago Public Library</p>
-                </Typography>
-                </li>
-            </ul>
+          <ul>
+            <li>
+              <Typography sx={{ fontSize: 17 }} color="text" gutterBottom>
+                <p>Harold Washington Library Center</p>
+              </Typography>
+            </li>
+            <li>
+              <Typography sx={{ fontSize: 17 }} color="text" gutterBottom>
+                <p>Richard J. Daley Branch, Chicago Public Library</p>
+              </Typography>
+            </li>
+            <li>
+              <Typography sx={{ fontSize: 17 }} color="text" gutterBottom>
+                <p>Chicago Lawn Branch, Chicago Public Library</p>
+              </Typography>
+            </li>
+          </ul>
 
-          <Button sx={{textDecoration: "underline"}}>Directions</Button>
-         
+          <Button sx={{ textDecoration: "underline" }}>Directions</Button>
+
         </CardContent>
         <CardActions>
           <Button size="small"></Button>
         </CardActions>
       </Card>
-      </>
-    );
-  }
+    </>
+  );
+}
