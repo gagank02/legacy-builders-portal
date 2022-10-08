@@ -59,6 +59,7 @@ router.post("/comments/get", async (req, res, next) => {
     } catch (error) {
         next(error);
     }
+
 });
 
 router.post(
@@ -74,5 +75,34 @@ router.post(
         }
     }
 );
+
+
+router.put('/progress', async (req, res) => {
+    req.decoded = validateToken(req.body.token);
+    const progress = await Courses .setProgress(req.body);
+    console.log(progress);
+    return res.status(200).json({token, progress});
+});
+
+router.put('/location', async (req, res) => {
+    req.decoded = validateToken(req.body.token);
+    const location = await Users.setLocation(req.body);
+    console.log(progress);
+    return res.status(200).json({token, location});
+});
+
+router.post('/location', async (req, res) => {
+    req.decoded = validateToken(req.body.token);
+    const location = await Users.setLocation(req.body);
+    console.log(progress);
+    return res.status(200).json({token, location});
+});
+
+router.post('/quiz-try', async (req, res) => {
+    req.decoded = validateToken(req.body.token);
+    const quizAttempt = await Quizzes.quizTry(req.body);
+    console.log(progress);
+    return res.status(200).json({token, quizAttempt});
+});
 
 module.exports = router;
