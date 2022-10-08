@@ -2,6 +2,19 @@ const db = require("../db");
 const { BadRequestError } = require("../utils/errors");
 
 class Comment {
+    static async makePublicComment(comment) {
+        let username = await Comment.getUserName(comment.user_id)
+        console.log(username);
+        return {
+            commentID: comment.id,
+            comment: comment.comment,
+            pageID: comment.page_id,
+            userID: comment.user_id,
+            parentCommentID: comment.parent_comment_id,
+            username: "username",
+        };
+    }
+
     static async getAllCommentOnPage(body) {
         const requiredFields = ["pageID"];
 
@@ -14,7 +27,7 @@ class Comment {
         });
 
         let res = await db.query(
-            "SELECT page_id, user_id, comment, parent_comment_id, id FROM Comments WHERE page_id = $1",
+            "SELECT page_id, user_id, comment, parent_comment_id, id  FROM Comments WHERE page_id = $1",
             [body.pageID]
         );
         if (res.rows[0] == undefined) {
@@ -23,9 +36,10 @@ class Comment {
 
         const comments = [];
 
-        res.rows.forEach(async (e) =>
-            comments.push(await Comment.makePublicComment(e))
-        );
+        res.rows.forEach(async (e) => {
+            let userValues = await Comment.makePublicComment(e);
+            comments.push(userValues);
+        });
         return comments;
     }
 
@@ -49,18 +63,16 @@ class Comment {
         if (res.rows[0] == undefined) {
             throw new BadRequestError(`Comment not found.`);
         }
-        return Comment.makePublicComment(res.rows[0]);
+        return await Comment.makePublicComment(res.rows[0]);
     }
 
-    static async makePublicComment(comment) {
-        console.log(comment);
-        return {
-            commentID: comment.id,
-            comment: comment.comment,
-            pageID: comment.page_id,
-            userID: comment.user_id,
-            parentCommentID: comment.parent_comment_id,
-        };
+    static async getUserName(userId) {
+        let username = await db.query(
+            "Select username FROM users WHERE $1 = id;",
+            [userId]
+        );
+        return username.rows[0];
+        // console.log(username.rows[0]);
     }
 
     static async setComment(res, values) {
@@ -92,7 +104,7 @@ class Comment {
         //     );
         // }
 
-        return Comment.makePublicComment(comment.rows[0]);
+        return await Comment.makePublicComment(comment.rows[0]);
     }
 }
 
