@@ -5,6 +5,7 @@ import MuiCard from '../components/MuiCard.jsx'
 import MuiTable from '../components/MuiTable.jsx'
 import MuiButton from '../components/MuiButton'
 import MuiDashboard from '../components/MuiDashboard'
+import MuiNextWebinar from '../components/MuiNextWebinar'
 
 
 
@@ -13,8 +14,7 @@ export default function Home() {
       <>
         <Navbar />
         <div className = 'welcome'>
-            <MuiDashboard header = "Welcome to Legacy Builders!" info = "Here is your dashboard." size = "87vw" desc= "Resume your Progress"> </MuiDashboard>
-          
+            <MuiDashboard header = "Welcome to Legacy Builders!" info = "Here is your dashboard, where you can see all your classes and all your progress at a glance." size = "87vw" desc= "Resume your Progress"> </MuiDashboard>
         </div>
         
         <div className = 'parent'>
@@ -24,7 +24,7 @@ export default function Home() {
           <div className = 'child'>
             <MuiCard header = "Your Progress" info = "70%" size = "30vw" img="/assets/progress bar.png"/>
             <br></br>
-            <MuiCard header = "Your Next Webinar" info = "https://urllink.com" />
+            <MuiNextWebinar header = "Your Next Webinar" info= "Tomorrow, 3 pm CST" url = "https://urllink.com" />
           </div>
         </div>
       </>

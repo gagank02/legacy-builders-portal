@@ -7,28 +7,37 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import MuiButton from './MuiButton';
 
+const bull = (
+  <Box
+    component="span"
+    sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
+  >
+    •
+  </Box>
+);
 
-
-export default function MuiDashboard({header, info, size, img, desc}) {
+export default function MuiNextWebinar({header, info, size, url}) {
   return (
     <Card sx={{ width: size}}>
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
           
         </Typography>
-        <Typography component="div" color="rgb(40, 68, 146)">
-          <h2>{header}</h2>
+        <Typography variant="h5" component="div" color="rgb(40, 68, 146)">
           
+          {header}
         </Typography>
-        <Typography sx={{}} color="text.secondary">
+        <Typography sx={{ mb: 1.5 }} color="text.secondary">
           {info}
         </Typography>
         <Typography variant="body2">
-          <br/>
-          <MuiButton desc={desc} />
-          
+          <a href={url}>{url}</a>
+        
         </Typography>
       </CardContent>
+      <CardActions>
+        <Button size="small"></Button>
+      </CardActions>
     </Card>
   );
 }
