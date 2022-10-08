@@ -27,7 +27,10 @@
 
 
 .CommunityPost .info .bottom .comments{
-    padding-left: 700px;
+    position: absolute;
+    float: right;
+    padding-left: 1250px;
+    text-decoration: underline;
 }
 
 .CreateBar{
@@ -43,4 +46,8 @@
 .CreateBar .button{
     display: inline-flex;
     padding-top: 5px;
+}
+
+.CreateBar .textField{
+    width: 300px;
 }
