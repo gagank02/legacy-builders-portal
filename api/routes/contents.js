@@ -1,9 +1,9 @@
 const express = require('express')
-const router = express.Router()
+const contentRoutes = express.Router()
 
-router.get('/', (req, res) => {
+contentRoutes.get('/', (req, res) => {
     res.send('hello world')
     console.log("test");
 })
 
-module.exports = router;
+module.exports = contentRoutes;
