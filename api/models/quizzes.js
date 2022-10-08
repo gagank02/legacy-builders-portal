@@ -1,9 +1,9 @@
 const db = require("../db")
 
 class Quiz {
-    static async getQuiz(quizID, userID) {
-        if (quizID != null && userID != null) {
-            return await db.query('SELECT * FROM quizzes q JOIN quiz_results qr ON q.id = qr.quiz_id WHERE qr.quiz_id = ($1) AND qr.user_id = ($2)', quizID, userID);
+    static async getQuiz(body) {        
+        if (body.hasOwnProperty("quizID") && body.hasOwnProperty("userID")) {
+            return await db.query('SELECT * FROM quizzes q JOIN quiz_results qr ON q.id = qr.quiz_id WHERE qr.quiz_id = ($1) AND qr.user_id = ($2)', body.quizID, body.userID);
         } else if (quizID != null) {
             return await db.query('SELECT * FROM quizzes WHERE id = ($1)', quizID);
         } else if (userID != null) {
