@@ -18,6 +18,11 @@
     gap: 5px;
 }
 
+.resources .other-resources{
+    border-radius: 5px;
+    padding-left: 570px;
+}
+
 @media screen and (max-width: 420px) {
     .resources h3{
         width: 70%;

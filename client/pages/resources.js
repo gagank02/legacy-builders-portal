@@ -1,5 +1,6 @@
 import Navbar from '../components/Navbar'
 import MuiResourceCard from '../components/MuiResourceCard';
+import MuiNearbyCard from '../components/MuiNearbyCard';
 
 const Resources = () => {
     const volunteers = [
@@ -29,6 +30,12 @@ const Resources = () => {
                 <MuiResourceCard firstName={volunteers[2].firstName} lastName={volunteers[2].lastName} location={volunteers[2].location} description={volunteers[2].description}></MuiResourceCard>
                 <br></br>
                 <MuiResourceCard firstName={volunteers[3].firstName} lastName={volunteers[3].lastName} location={volunteers[3].location} description={volunteers[3].description}></MuiResourceCard>
+            </div>
+
+            <br></br>
+
+            <div className='other-resources'>
+                <MuiNearbyCard></MuiNearbyCard>
             </div>
 
         </div>
