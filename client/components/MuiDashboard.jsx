@@ -7,16 +7,9 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import MuiButton from './MuiButton';
 
-const bull = (
-  <Box
-    component="span"
-    sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
-  >
-    •
-  </Box>
-);
 
-export default function MuiCard({header, info, size, img}) {
+
+export default function MuiDashboard({header, info, size, img, desc}) {
   return (
     <Card sx={{ width: size}}>
       <CardContent>
@@ -31,8 +24,8 @@ export default function MuiCard({header, info, size, img}) {
           {info}
         </Typography>
         <Typography variant="body2">
-          <img src={img} width = "90%" />
-        
+          <br/>
+          <MuiButton desc={desc} />
         </Typography>
       </CardContent>
       <CardActions>
