@@ -36,7 +36,7 @@ const Login = () => {
 
     return (
         <>
-            <div className="container">
+            <div className="containerLogin">
                 <div className="signOn">
                     <h1>Welcome to Legacy Builder!</h1>
                     <div className="image">

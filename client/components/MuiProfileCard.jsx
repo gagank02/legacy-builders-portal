@@ -22,10 +22,14 @@ export default function MuiProfileCard({ firstName, lastName, userName, email, l
     const data = {
       userID: id,
       location: locc,
-      token: localStorage.getItem('token')
+      // token: localStorage.getItem('token')
     }
 
-    axios.post(`${API_URL}/contents/location`, data)
+    const config = {
+      headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
+    }
+
+    axios.post(`${API_URL}/contents/location`, config, data)
       .then(function (res) {
         console.log(res);
         setRLoc(res.data.location);

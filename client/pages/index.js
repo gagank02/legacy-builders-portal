@@ -9,11 +9,11 @@ import MuiNextWebinar from '../components/MuiNextWebinar'
 import {useEffect} from "react";
 
 export default function Home() {
-  /*useEffect(() => {
+  useEffect(() => {
     if (!localStorage.getItem('token')) {
       window.location = '/login';
     }
-  });*/
+  });
 
   return (
       <>
