@@ -8,8 +8,8 @@ const handleSubmit = (e) => {
 
 }
 
-const CommunityPost = () => {
-  const [title, setTitle] = useState('');
+const CommunityPost = ({title}) => {
+  //const [title, setTitle] = useState('');
   const [tag, setTag] = useState('');
   const [content, setContent] = useState('');
   
@@ -27,6 +27,7 @@ const CommunityPost = () => {
       });
   }
 
+  console.log(title);
   return ( 
       <>
       <div className='communityPost'>
@@ -35,7 +36,7 @@ const CommunityPost = () => {
 
           <div className="input-container">
               <label>Title: </label>
-              <input type="text" value={title} required onChange={(e) => setTitle(e.target.value)}/>
+              <input type="text" value={title} required />
           </div>
 
           <br></br>
@@ -107,6 +108,7 @@ const CommunityPostList = ({header, firstName, lastName, tag}) => {
 }*/
 
 export default function Community() {
+  const [title, setTitle] = useState('');
   const [showCreatePost, setShowCreatePost] = useState(false);
   const [posts, setPosts] = useState([
     {header:'Blockchain developers best practices on innovation chain', firstName:'first', lastName:'last', tag:'Finance'},
@@ -121,7 +123,7 @@ export default function Community() {
         <Navbar></Navbar>
         <div className='CreateBar'>
           <form>
-            <input className='textField' type="text" placeholder="Share what's on you mind..."></input>
+            <input className='textField' type="text" placeholder="Share what's on you mind..." value={title} onChange = {(e) => setTitle(e.target.value)}></input>
             <div className='button'>
               <input type='button' value='Create' onClick={() => setShowCreatePost(true)}></input>
             </div>
@@ -130,7 +132,7 @@ export default function Community() {
 
         <div>
           {showCreatePost && <br></br>}
-          {showCreatePost && <CommunityPost></CommunityPost>}
+          {showCreatePost && <CommunityPost title={title}></CommunityPost>}
         </div>
 
         <br></br>
