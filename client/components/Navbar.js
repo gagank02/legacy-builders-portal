@@ -16,7 +16,7 @@ export default function Navbar() {
         },
         {
             label: 'Community',
-            href: '/Community'
+            href: '/community'
         },
         {
             label: 'Resources',

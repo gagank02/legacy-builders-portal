@@ -5,6 +5,7 @@ import '../components/profile.css'
 import '../components/learn.css'
 import '../components/signIn.css'
 import '../components/community.css'
+import '../components/resources.css'
 
 function MyApp({ Component, pageProps }) {
     return <Component {...pageProps} />
