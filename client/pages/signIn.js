@@ -1,6 +1,9 @@
 import { useState } from "react";
 import MuiSubmitButton from "../components/MuiSubmitButton";
 import MuiSignin from "../components/MuiSignin";
+import axios from 'axios';
+
+const API_URL = 'http://localhost:3001'
 
 const SignIn = () => {
     
@@ -9,16 +12,27 @@ const SignIn = () => {
     
     const handleSubmit = (e) => {
         e.preventDefault();
-        const user = {userName, password};
 
-        fetch('', {
-            method: 'POST',
-            headers: {"Content-Type": "application/json"},
-            body: JSON.stringify(user)
-        }).then(() => {
-            console.log("User signed in");
 
-        });
+        const data = {userName: userName, password: password};
+ 
+        // fetch('', {
+        //     method: 'POST',
+        //     headers: {"Content-Type": "application/json"},
+        //     body: JSON.stringify(user)
+        // }).then(() => {
+        //     console.log("User signed in");
+
+        // });
+
+        axios.post(`${API_URL}/auth/log-in`, data)
+            .then(function(res) {
+                console.log(res);
+            })
+            .catch(function(err) {
+                console.log(err)
+            });
+
     }
 
 
@@ -47,7 +61,7 @@ const SignIn = () => {
                     <br></br>
                     </form>
                 <div className = "submitButton">
-                    <MuiSubmitButton desc="Submit"/>
+                    <MuiSubmitButton desc="Submit" onClick={handleSubmit}/>
                 </div>
             </div>
         </div>
