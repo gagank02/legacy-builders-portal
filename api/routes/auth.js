@@ -39,4 +39,13 @@ router.get("/me", security.requireAuthenticatedUser, async (req, res, next) => {
     }
 });
 
+router.put('/location', security.requireAuthenticatedUser, async (req, res, next) => {
+    try {
+        const location = await User.setLocation(req.body, res.locals.user.email);
+        return res.status(200).json({location});
+    } catch (error) {
+        next(error);
+    }    
+});
+
 module.exports = router;

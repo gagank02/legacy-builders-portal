@@ -48,8 +48,7 @@ router.get("/pages", security.requireAuthenticatedUser, async (req, res) => {
 router.post("/comments/commentsonpage", async (req, res, next) => {
     try {
         let comments = await Comments.getAllCommentOnPage(req.body);
-        console.log(comments);
-        return res.status(201).send(comments);
+        return res.status(200).send(comments);
     } catch (error) {
         next(error);
     }
@@ -59,7 +58,7 @@ router.post("/comments/get", async (req, res, next) => {
     try {
         let comment = await Comments.getComment(req.body);
         console.log(comment);
-        return res.status(201).send(comment);
+        return res.status(200).send(comment);
     } catch (error) {
         next(error);
     }
@@ -86,26 +85,6 @@ router.put('/progress', security.requireAuthenticatedUser, async (req, res, next
         const progress = await Courses.setProgress(req.body);
         console.log(progress);
         return res.status(200).json({token, progress});
-    } catch (error) {
-        next(error);
-    }    
-});
-
-router.put('/location', security.requireAuthenticatedUser, async (req, res, next) => {
-    try {
-        const location = await Users.setLocation(req.body);
-        console.log(progress);
-        return res.status(200).json({token, location});
-    } catch (error) {
-        next(error);
-    }    
-});
-
-router.post('/location', security.requireAuthenticatedUser, async (req, res, next) => {
-    try {
-        const location = await Users.setLocation(req.body);
-        console.log(progress);
-        return res.status(200).json({token, location});
     } catch (error) {
         next(error);
     }    
