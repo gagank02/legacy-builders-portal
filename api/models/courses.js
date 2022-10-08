@@ -12,6 +12,10 @@ class Course {
             return await db.query('SELECT * FROM courses');
         }
     }
+    
+    static async setProgress(userID, progress) {
+        return await db.query('UPDATE user_courses SET progress = ($1) WHERE user_id = ($2)', progress, userID);
+    }
 }
 
 module.exports = Course;
