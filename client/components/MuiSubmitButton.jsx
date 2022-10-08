@@ -5,10 +5,8 @@ import Button from '@mui/material/Button';
 
 export default function MuiSubmitButton({desc, onClick}) {
   return (
-    
     <Stack float="center" width="30px">
-      <Button variant="contained" >Submit</Button>
-      <Button variant="contained" onClick={onClick} href="/">Submit</Button>
+      <Button variant="contained" href="/" onClick={onClick}>Submit</Button>
       
     </Stack>
   );
