@@ -47,7 +47,7 @@ const Register = () => {
     return ( 
         <>
         <div className="signOn">
-            <h1>Welcome to Legacy Builder!</h1>
+            <h1>Welcome to the Legacy Builder Portal!</h1>
             <div className="image">
                 <img src="/assets/raf_logo.png"></img>
             </div>

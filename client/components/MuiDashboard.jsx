@@ -17,7 +17,7 @@ export default function MuiDashboard({header, info, size, img, desc}) {
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
           
         </Typography>
-        <Typography component="div" color="rgb(40, 68, 146)">
+        <Typography component="div" color="blue">
           <h2>{header}</h2>
           
         </Typography>
