@@ -23,6 +23,7 @@ class User {
             lastName: user.last_name,
             email: user.email,
             createdAt: user.created_at,
+            location: user.location
         };
     }
 
@@ -34,7 +35,6 @@ class User {
             "firstName",
             "lastName",
             "password",
-            "location"
         ];
 
         requiredFields.forEach((field) => {
@@ -67,7 +67,7 @@ class User {
                 credentials.firstName,
                 credentials.lastName,
                 lowercasedEmail,
-                "req.body.location",
+                credentials.location || "",
             ]
         );
         return User.makePublicUser(dbRes.rows[0]);
