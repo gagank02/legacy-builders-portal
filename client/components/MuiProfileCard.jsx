@@ -8,11 +8,16 @@ import Typography from '@mui/material/Typography';
 import { Avatar } from '@mui/material';
 import { blue } from '@mui/material/colors';
 import MuiInformationTable from './MuiInformationTable';
+import axios from 'axios';
 import { useState } from 'react';
+
+const API_URL = 'http://localhost:3001'
 
 
 export default function MuiProfileCard({ firstName, lastName, userName, email, location, courses, id }) {
   const [loc, setLoc] = useState(location);
+  const [Rloc, setRLoc] = useState("");
+  
   function updateLocation(locc) {
     const data = {
       userID: id,
@@ -23,7 +28,7 @@ export default function MuiProfileCard({ firstName, lastName, userName, email, l
     axios.post(`${API_URL}/contents/location`, data)
       .then(function (res) {
         console.log(res);
-        setLoc(res.data.location);
+        setRLoc(res.data.location);
       })
       .catch(function (err) {
         console.log(err)
@@ -52,14 +57,14 @@ export default function MuiProfileCard({ firstName, lastName, userName, email, l
           <ul style={{}}>
             <p>{userName}</p>
             <p>{email} </p>
-            <p>{loc}</p>
+            <p>{Rloc}</p>
           </ul>
         </div>
       </CardContent>
       <br></br><br></br><br></br><br></br><br></br>
       <CardActions>
-        <form>
-          <input className='textField' type="text" placeholder="Update your location" value={location} onChange={(e) => setLoc(e.target.value)}></input>
+        <form style={{paddingLeft: "50px", display: "flex", "justifyContent": "center"}}>
+          <input className='textField' type="text" placeholder="Update your location" value={loc} onChange={(e) => setLoc(e.target.value)}></input>
           <div className='button'>
             <input type='button' value='Update' onClick={() => updateLocation(loc)}></input>
           </div>
