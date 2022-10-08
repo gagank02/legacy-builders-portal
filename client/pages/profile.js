@@ -24,7 +24,7 @@ const Profile = () => {
             headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
         }
 
-        /*axios.get(`${API_URL}/auth/me`, config)
+        axios.get(`${API_URL}/auth/me`, config)
             .then(function (res) {
                 console.log(res);
                 let data = res.data.user;
@@ -38,7 +38,7 @@ const Profile = () => {
             .catch(function (err) {
                 console.log(err);
                 window.location = '/login'
-            });*/
+            });
     }, [])
 
     return (
