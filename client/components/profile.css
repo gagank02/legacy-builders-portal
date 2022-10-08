@@ -1,4 +1,10 @@
-.profile-header {
-    width: auto;
-    margin: auto;
+.profile .avatar{
+    margin: 1rem;
+    padding: 2rem 2rem;
+    text-align: center;
+  }
+
+.profile .profile-info{
+    display: inline-block;
+    
 }
