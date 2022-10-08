@@ -1,0 +1,20 @@
+.CommunityPost{
+    background-color: #324258;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+}
+
+.CommunityPost .image{
+    padding-left: 15px;
+    padding-top: 25px;
+    padding-right: 15px;
+}
+
+.CommunityPost .info .bottom{
+    display: flex;
+}
+
+.CommunityPost .info .bottom .comments{
+    padding-left: 700px;
+}
