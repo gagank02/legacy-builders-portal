@@ -82,7 +82,7 @@ const Register = () => {
                     <br></br>
                     </form>
                 <div className = "submitButton">
-                    <MuiSubmitButton desc="Submit"/>
+                    <MuiSubmitButton desc="Submit" onClick={handleSubmit}/>
                 </div>
             </div>
         </div>
