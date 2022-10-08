@@ -9,7 +9,7 @@ import { Avatar } from '@mui/material';
 import { blue } from '@mui/material/colors';
 
 
-export default function BasicCard({userName, email, location, courses}) {
+export default function BasicCard() {
   return (
     <Card sx={{ width: "45vw"}}>
     <CardContent>
@@ -17,13 +17,13 @@ export default function BasicCard({userName, email, location, courses}) {
         
       </Typography>
       <Typography variant="h5" component="div">
-          Profile Information
+          Friend List
         </Typography>
         <ul style={{ }}>
-            <li>Username: {userName}</li>
-            <li>Email: {email}</li>
-            <li>Location: {location}</li>
-            <li>Courses: {courses}</li>
+            <li>Friend #1</li>
+            <li>Friend #2</li>
+            <li>Friend #3</li>
+            <li>Friend #4</li>
         </ul>
       <Typography variant="body2">
         

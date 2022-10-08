@@ -1,2 +1,10 @@
-.profile-header .avatar{
+.profile .avatar{
+    margin: 1rem;
+    padding: 2rem 2rem;
+    text-align: center;
+  }
+
+.profile .profile-info{
+    display: inline-block;
+    
 }
