@@ -75,7 +75,7 @@ export default function Learn() {
     return (
         <>
             <Navbar />
-            <div className="container">
+            <div className="containerL">
                 <h2>Browse Categories</h2>
                 <div className="categories">
                     <CategoryCard setSearchQuery={setSearchQuery} label='Finance' />
@@ -84,12 +84,13 @@ export default function Learn() {
                     <CategoryCard setSearchQuery={setSearchQuery} label='Conflict Resolution' />
                 </div>
 
-                <div className="searchbar">
-                    <SearchBar setSearchQuery={setSearchQuery} label="lesson" />
+                <div className='filters'>
+                    <div className="searchbar">
+                        <SearchBar setSearchQuery={setSearchQuery} label="lesson" />
+                    </div>
+
+                    <Button sx={{ padding: "0", margin: "0", order: 3, width: '30%' }} onClick={() => { setSearchQuery("") }}>Reset Filters</Button>
                 </div>
-
-                <Button sx={{padding: "0", margin: "0", order: 3}} onClick={()=>{setSearchQuery("")}}>Reset Filters</Button>
-
                 <div className="lessons">
                     {dataFiltered.map(({ title, category, img, time }) => (
                         <LessonCard

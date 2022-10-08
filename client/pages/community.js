@@ -121,7 +121,7 @@ export default function Community() {
 
   return (
       <>
-      <div className="container">
+      <div className="containerCom">
         <Navbar></Navbar>
         <div className='CreateBar'>
           <form>

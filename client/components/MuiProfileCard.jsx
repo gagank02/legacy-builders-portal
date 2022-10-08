@@ -61,7 +61,7 @@ export default function MuiProfileCard({ firstName, lastName, userName, email, l
           <ul style={{}}>
             <p>{userName}</p>
             <p>{email} </p>
-            <p>{Rloc}</p>
+            <p>{loc}</p>
           </ul>
         </div>
       </CardContent>

@@ -8,7 +8,7 @@ const useStyles = makeStyles({
         fontFamily: 'Poppins',
         position: 'relative',
         margin: "0 1%",
-        width: "200px",
+        width: "40%",
         [`& fieldset`]: {
           borderRadius: 50,
         },

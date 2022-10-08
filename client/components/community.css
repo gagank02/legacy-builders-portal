@@ -91,12 +91,12 @@ body {
     padding-top: 65px;
 }
 
-.container {
-    display: none;
+.containerCom {
+    /* padding-top: 3%; */
 }
 
 @media screen and (max-width: 420px) {
-    .container {
+    .containerCom {
         position: relative;
         display: flex;
         flex-direction: column;

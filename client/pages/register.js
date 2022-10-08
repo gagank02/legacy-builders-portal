@@ -12,6 +12,7 @@ const Register = () => {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
+    const [location, setLocation] = useState('');
     
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -22,6 +23,7 @@ const Register = () => {
             firstName: firstName,
             lastName: lastName,
             email: email,
+            location: location
         }
 
         axios.post(`${API_URL}/auth/sign-up`, data)
@@ -73,6 +75,11 @@ const Register = () => {
                     <div className="input-container">
                         <label>Email: </label><br></br>
                         <input type="email" name="pass" value={email} required onChange={(e) => setEmail(e.target.value)}/>
+                    </div>
+                    <br></br>
+                    <div className="input-container">
+                        <label>Location: </label><br></br>
+                        <input type="location" name="pass" value={location} required onChange={(e) => setLocation(e.target.value)}/>
                     </div>
                     <br></br>
                     </form>

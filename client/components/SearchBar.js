@@ -8,7 +8,7 @@ export default function SearchBar({ setSearchQuery, label }) {
 
     return (
         <>
-            <form>
+            <form style={{display: 'flex', justifyContent: 'center'}}>
                 <div className={classes.textField}>
                     <TextField
                         id="search-bar"
