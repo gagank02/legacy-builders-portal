@@ -19,6 +19,7 @@ const Profile = () => {
                     <div>
                         <MuiProfileTable userName="Matthew1234" email="mwhyte3602@gmail.com" location='Chicago, Illinois' courses='Courses'></MuiProfileTable>
                     </div>
+                    <br></br>
                     <div>
                         <MuiFriendsCard></MuiFriendsCard>
                     </div>
