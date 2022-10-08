@@ -15,17 +15,7 @@ const Register = () => {
     
     const handleSubmit = (e) => {
         e.preventDefault();
-        // const usdater = {userName, password};
-
-        // fetch('', {
-        //     method: 'POST',
-        //     headers: {"Content-Type": "application/json"},
-        //     body: JSON.stringify(user)
-        // }).then(() => {
-        //     console.log("User signed in");
-
-        // });
-
+        
         const data = {
             userName: userName,
             password: password,
@@ -37,8 +27,12 @@ const Register = () => {
         axios.post(`${API_URL}/auth/sign-up`, data)
             .then(function(res) {
                 console.log(res);
+                localStorage.setItem('token', res.data.token);
+                window.location = '/'
             })
             .catch(function(err) {
+                alert("This user already exists! Please click 'OK' to be redirected to the login page.")
+                window.location = '/login'
                 console.log(err)
             });
     }

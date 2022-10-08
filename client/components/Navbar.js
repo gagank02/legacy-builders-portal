@@ -35,11 +35,18 @@ export default function Navbar() {
     };
 
     const [currentPage, setCurrentPage] = useState("")
+    const [curUser, setCurUser] = useState(null)
 
     useEffect(() => {
         var curPage = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
         setCurrentPage(curPage);
+
     }, [])
+
+    function logout() {
+        localStorage.clear();
+        window.location.href = '/login';
+    }
 
     return (
         <>
@@ -74,15 +81,16 @@ export default function Navbar() {
                         </Box>
 
                         <Box className={classes.util}>
-                            {/* <Box className={classes.tools}>
-                                <a rel="noreferrer">
+                            <Box className={classes.tools}>
+                                {/* <a rel="noreferrer">
                                     <img src="/assets/search.png" alt='search' />
                                 </a>
                                 <a rel="noreferrer">
                                     <img src="/assets/new.png" alt='notifications' />
-                                </a>
-                            </Box> */}
-                            {/* <Typography sx={{ color: '#DFE0EB', fontSize: "30px", textAlign: 'center', padding: '0 15px' }}>|</Typography> */}
+                                </a> */}
+                                <button onClick={logout}>Log Out</button>
+                            </Box>
+                            <Typography sx={{ color: '#DFE0EB', fontSize: "30px", textAlign: 'center', padding: '0 15px' }}>|</Typography>
                             <Box className={classes.profile}>
                             <Typography className={classes.name}>FirstName LastName</Typography>
                             <IconButton
