@@ -18,19 +18,20 @@ export default function MuiFriendsCard() {
       </Typography> */}
       {/* <Typography variant="h5" component="div"> */}
           
-          <h2>Friends List</h2>
+          <h2>My Community</h2>
         {/* </Typography> */}
-        <ul style={{}}>
+        <ul style={{ }}>
         
-        <p> <img src = "assets/profile.webp"  width = "20px"  />
-               Friend #1</p> 
+        <p> <img src = "assets/profile.webp" width = "20px"   />
+        <gap></gap>
+        &nbsp;  Friend #1</p> 
 
         <p> <img src = "assets/profile.webp" width = "20px" />
-               Friend #2</p>
+        &nbsp;  Friend #2</p>
         <p> <img src = "assets/profile.webp" width = "20px" />
-               Friend #3</p>
+        &nbsp;  Friend #3</p>
         <p> <img src = "assets/profile.webp" width = "20px" />
-               Friend #4</p>
+        &nbsp;    Friend #4</p>
         </ul>
     </CardContent>
     <CardActions>
