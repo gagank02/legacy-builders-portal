@@ -12,6 +12,7 @@ import axios from 'axios';
 const API_URL = 'http://localhost:3001'
 
 const Profile = () => {
+    const [id, setId] = useState('');
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [userName, setUserName] = useState("");
@@ -23,20 +24,21 @@ const Profile = () => {
             headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
         }
 
-        // axios.get(`${API_URL}/auth/me`, config)
-        //     .then(function (res) {
-        //         console.log(res);
-        //         let data = res.data.user;
-        //         setFirstName(data.firstName);
-        //         setLastName(data.lastName);
-        //         setUserName(data.userName);
-        //         setEmail(data.email);
-        //         setLocation(data.location);
-        //     })
-        //     .catch(function (err) {
-        //         console.log(err);
-        //         window.location = '/login'
-        //     });
+        axios.get(`${API_URL}/auth/me`, config)
+            .then(function (res) {
+                console.log(res);
+                let data = res.data.user;
+                setId(data.id);
+                setFirstName(data.firstName);
+                setLastName(data.lastName);
+                setUserName(data.userName);
+                setEmail(data.email);
+                setLocation(data.location);
+            })
+            .catch(function (err) {
+                console.log(err);
+                window.location = '/login'
+            });
     }, [])
 
     return (
@@ -54,7 +56,7 @@ const Profile = () => {
                             </div>
                         </div>
                         <div className="child" >
-                            <MuiProfileCard firstName={firstName} lastName={lastName} userName={userName} email={email} location={location} ></MuiProfileCard>
+                            <MuiProfileCard firstName={firstName} lastName={lastName} userName={userName} email={email} location={location} id={id} ></MuiProfileCard>
                         </div>
                     </div>
                     <div className="parent">
