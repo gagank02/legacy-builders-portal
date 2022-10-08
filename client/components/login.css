@@ -1,0 +1,26 @@
+.signOn {
+    text-align: center;
+    float: center;
+}
+
+.submitButton {
+    float: center;
+    /* padding-left:48%; */
+    padding-right: 35px;
+    padding-top: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
