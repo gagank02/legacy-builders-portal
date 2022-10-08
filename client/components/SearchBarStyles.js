@@ -7,7 +7,8 @@ const useStyles = makeStyles({
     textField: {
         fontFamily: 'Poppins',
         position: 'relative',
-        margin: "0 17%",
+        margin: "0 1%",
+        width: "200px",
         [`& fieldset`]: {
           borderRadius: 50,
         },
