@@ -6,6 +6,7 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import MuiButton from './MuiButton';
+import MuiResumeProgress from './MuiResumeProgress';
 
 
 
@@ -25,7 +26,7 @@ export default function MuiDashboard({header, info, size, img, desc}) {
         </Typography>
         <Typography variant="body2">
           <br/>
-          <MuiButton desc={desc} />
+          <MuiResumeProgress desc={desc} href="/webinar" />
           
         </Typography>
       </CardContent>
