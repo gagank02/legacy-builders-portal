@@ -3,8 +3,9 @@ import { AppBar, Box, Button, ClickAwayListener, Container, IconButton, Menu, Me
 import MuiTable from '../components/MuiTable';
 import MuiCard from '../components/MuiCard';
 import MuiAvatar from '../components/MuiAvatar'
-import MuiProfileTable from '../components/MuiProfileTable'
+import MuiProfileTable from '../components/MuiProfileCard'
 import MuiFriendsCard from '../components/MuiFriendsCard'
+import MuiProfileCard from '../components/MuiProfileCard';
 
 const Profile = () => {
     return ( 
@@ -13,14 +14,15 @@ const Profile = () => {
             <div className="profile">
                 
                 <div className="parent">
-                <h1 color = "rgb(40, 68, 146)"> Profile </h1>
+                    
+                <h2> Profile </h2>
                     <div className = "child">
                         <div className='avatar'>
                             <MuiAvatar sx={{}} first="First" last="Last"></MuiAvatar>
                         </div>
                     </div>
                     <div className = "child" >
-                        <MuiProfileTable userName="firstlast123" email="first.last@gmail.com" location='Chicago, Illinois' ></MuiProfileTable>
+                        <MuiProfileCard userName="firstlast123" email="first.last@gmail.com" location='Chicago, Illinois' ></MuiProfileCard>
                     </div>
                 </div>
                     

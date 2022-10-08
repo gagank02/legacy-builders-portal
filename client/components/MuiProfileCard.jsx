@@ -7,17 +7,16 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Avatar } from '@mui/material';
 import { blue } from '@mui/material/colors';
+import MuiInformationTable from './MuiInformationTable';
 
 
-export default function BasicCard({userName, email, location, courses}) {
+export default function MuiProfileCard({userName, email, location, courses}) {
   return (
     <Card sx={{ width: "65vw"}}>
     <CardContent>
         <h3>First Last</h3>
           Profile Information
-          {/* <p>Username:</p><p>{userName}</p> */}
-          
-          
+        {/* <MuiInformationTable userName={userName} email = {email} location = {location} /> */}
         <ul style={{ }}>
             <li>Username: {userName}</li>
             <li>Email: {email}</li>

@@ -17,7 +17,7 @@ export default function BasicCard() {
         
       </Typography>
       <Typography variant="h5" component="div">
-          <h3>Friend List</h3>
+          <h3>Friends List</h3>
         </Typography>
         <ul style={{ }}>
         
