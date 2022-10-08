@@ -32,7 +32,8 @@ CREATE TABLE comments(
     id                      SERIAL PRIMARY KEY,
     page_id                 INTEGER NOT NULL REFERENCES pages(id),
     user_id                 INTEGER NOT NULL REFERENCES users(id),
-    date                    TIMESTAMP NOT NULL DEFAULT NOW()
+    date                    TIMESTAMP NOT NULL DEFAULT NOW(),
+    comment                 TEXT NOT NULL
 );
 
 CREATE TABLE quizzes (
