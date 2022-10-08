@@ -30,18 +30,11 @@ router.get('/quizzes', async (req, res) => {
     return res.status(200).json({token, quiz});
 })
 
-router.post('/usercourses', async (req, res) => {
-    req.decoded = validateToken(req.body.token);
-    var userCourse = await UserCourses.getUserCourse(req.body);
-    console.log(userCourse);  
-    res.send('hello world');
-})
-
 router.post('/pages', async (req, res) => {
     req.decoded = validateToken(req.body.token);
     var page = await Pages.getPage(req.body);
     console.log(page);     
-    res.send('hello world'); 
+    return res.status(200).json({token, page});
 })
 
 router.post('/comments', async (req, res) => {
@@ -51,11 +44,5 @@ router.post('/comments', async (req, res) => {
     res.send('hello world');   
 })
 
-router.post('/quizresults', async (req, res) => {
-    req.decoded = validateToken(req.body.token);
-    var quizResult = await QuizResults.getQuizResult(req.body);
-    console.log(quizResult);  
-    res.send('hello world');
-})
 
 module.exports = contentRoutes;
