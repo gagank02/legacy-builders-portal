@@ -6,6 +6,7 @@ import '../components/learn.css'
 import '../components/login.css'
 import '../components/community.css'
 import '../components/resources.css'
+import '../components/webinar.css'
 
 function MyApp({ Component, pageProps }) {
     return <Component {...pageProps} />
