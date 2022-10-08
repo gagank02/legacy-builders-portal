@@ -6,10 +6,12 @@ const UserCourses = require('../models/user-courses');
 const Pages = require('../models/pages');
 const Comments = require('../models/comments');
 const QuizResults = require('../models/quiz-results');
+const { validateToken } = require("../utils/tokens");
+
 
 
 router.post('/', async (req, res) => {
-
+    const decoded = validateToken(req.body.token);
     // console.log(req.body);
     res.send('hello world')
     // console.log("test");
