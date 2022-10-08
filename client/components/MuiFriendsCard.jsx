@@ -11,7 +11,7 @@ import { blue } from '@mui/material/colors';
 
 export default function MuiFriendsCard() {
   return (
-    <Card sx={{ width: "30vw", height: "35.5vh"}}>
+    <Card sx={{ width: "30vw", height: "35.5vh",}}>
     <CardContent>
       {/* <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
         
@@ -20,10 +20,11 @@ export default function MuiFriendsCard() {
           
           <h2>Friends List</h2>
         {/* </Typography> */}
-        <ul style={{ }}>
+        <ul style={{}}>
         
-        <p> <img src = "assets/profile.webp" width = "20px" />
-               Friend #1</p>
+        <p> <img src = "assets/profile.webp"  width = "20px"  />
+               Friend #1</p> 
+
         <p> <img src = "assets/profile.webp" width = "20px" />
                Friend #2</p>
         <p> <img src = "assets/profile.webp" width = "20px" />

@@ -12,15 +12,32 @@
 .parent {
   float:left;
   margin: 1rem; 
-  padding: 2rem 2rem;
+  padding: 10px 10px;
   text-align: center;
 }
 .child {
   display: inline-block; 
-  padding: 1rem 1rem;
+  padding: 10px 10px;
   vertical-align: middle;
   text-align: left;
+  
 }
+
+.css-1cdh5co-MuiPaper-root-MuiCard-root {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.87);
+  width: 65vw;
+  height: 50vh;
+}
+
+.css-1ms4lia-MuiPaper-root-MuiCard-root {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.87);
+
+  width: 30vw;
+  height: 50vh;
+}
+
 
 /* .profile .parent h1 {
    color:rgb(40, 68, 146); 
