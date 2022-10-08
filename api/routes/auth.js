@@ -1,10 +1,9 @@
-const express = require('express')
-const authRoutes = express.Router()
+const express = require("express");
+const users = require("../models/users");
+const authRoutes = express.Router();
 
-authRoutes.post('/sign-up', (req, res) => {
-    res.send('hello world')
-    console.log("test");
-})
+// userName, location, firstName, lastName, email, password
+authRoutes.post('/sign-up', users.signUp(req.userName, req.location, req.firstName, req.lastName, req.email, req.password));
 
 module.exports = authRoutes;
 
