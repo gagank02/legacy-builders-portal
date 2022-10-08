@@ -16,9 +16,19 @@ const useStyles = makeStyles({
         marginLeft: '38px',
         fontStyle: 'normal',
         fontSize: '16px',
+
         ['@media (max-width: 1000px)']: {
             display: 'none',
         },
+
+        '&:hover, &:visited, &:focus, &:active': {
+            textDecoration: 'none',
+            borderBottom: "3px solid",
+
+            ['@media (max-width: 1000px)']: {
+                display: 'none',
+            }
+        }
     },
 
     header: {
@@ -133,7 +143,7 @@ const useStyles = makeStyles({
         fontStyle: 'normal',
         fontWeight: 700,
         fontSize: '16px',
-        
+
         '&:hover, &:visited, &:focus, &:active': {
             textDecoration: 'none',
             borderBottom: "3px solid",
@@ -210,7 +220,7 @@ const useStyles = makeStyles({
     },
 
     name: {
-        color: 'black', 
+        color: 'black',
         textAlign: 'center',
         [`@media (max-width: ${mobile})`]: {
             display: 'none'
@@ -252,7 +262,7 @@ const useStyles = makeStyles({
         [`@media (max-width: ${mobile})`]: {
             right: '50px'
         },
-        
+
     }
 }, { index: 1 });
 
