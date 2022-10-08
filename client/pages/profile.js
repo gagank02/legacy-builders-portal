@@ -25,7 +25,6 @@ const Profile = () => {
                         <MuiProfileCard userName="firstlast123" email="first.last@gmail.com" location='Chicago, Illinois' ></MuiProfileCard>
                     </div>
                 </div>
-                    
                 <div className="parent">
                     <div className = "child">
                             <MuiFriendsCard></MuiFriendsCard>

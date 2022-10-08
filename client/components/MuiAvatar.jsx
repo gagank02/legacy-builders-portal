@@ -11,9 +11,9 @@ import { Padding } from '@mui/icons-material';
 
 export default function BasicCard({ first, last }) {
   return (
-    <Card sx={{ width: "250px"}}>
+    <Card sx={{ width: "260px"}}>
       <CardContent>
-        <Avatar sx={{ width: 205, height: 205, fontSize: 100 }}>{first[0]}{last[0]}</Avatar>
+        <Avatar sx={{ width: 230, height: 230, fontSize: 100 }}>{first[0]}{last[0]}</Avatar>
        
 
       </CardContent>

@@ -25,12 +25,15 @@ export default function MuiInformationTable({userName, email, location}) {
         <TableHead>
           <TableRow>
             <TableCell>Profile Information</TableCell>
+            <TableCell>Profile Information</TableCell>
+            <TableCell>Profile Information</TableCell>
+            <TableCell>Profile Information</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row) => (
             <TableRow
-              key={row.name}
+              key={row.data}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell component="th" scope="row">

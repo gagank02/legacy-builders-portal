@@ -9,16 +9,17 @@ import { Avatar } from '@mui/material';
 import { blue } from '@mui/material/colors';
 
 
-export default function BasicCard() {
+export default function MuiFriendsCard() {
   return (
-    <Card sx={{ width: "30vw"}}>
+    <Card sx={{ width: "30vw", height: "35.5vh"}}>
     <CardContent>
-      <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+      {/* <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
         
-      </Typography>
-      <Typography variant="h5" component="div">
-          <h3>Friends List</h3>
-        </Typography>
+      </Typography> */}
+      {/* <Typography variant="h5" component="div"> */}
+          
+          <h2>Friends List</h2>
+        {/* </Typography> */}
         <ul style={{ }}>
         
         <p> <img src = "assets/profile.webp" width = "20px" />
