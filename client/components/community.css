@@ -18,3 +18,18 @@
 .CommunityPost .info .bottom .comments{
     padding-left: 700px;
 }
+
+.CreateBar{
+    background-color: #324258;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    height: 35px;
+    width: 400px;
+    margin-left: 550px;
+}
+
+.CreateBar .button{
+    display: inline-flex;
+    padding-top: 5px;
+}

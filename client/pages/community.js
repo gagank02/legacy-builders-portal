@@ -3,6 +3,10 @@ import Head from 'next/head'
 import Navbar from '../components/Navbar'
 
 
+const handleSubmit = (e) => {
+
+}
+
 const CommunityPost = ({header, firstName, lastName}) => {
   return ( 
       <>
@@ -24,11 +28,28 @@ const CommunityPost = ({header, firstName, lastName}) => {
    );
 }
 
+const CreateBar = ({header, firstName, lastName}) => {
+  return ( 
+    <>
+    <div className='CreateBar'>
+      <form>
+        <input type="text" placeholder='Placeholder'></input>
+        <div className='button'>
+          <input type='submit'></input>
+        </div>
+      </form>
+    </div>
+    </>
+  );
+}
+
 export default function Community() {
   return (
       <>
       <div>
         <Navbar></Navbar>
+        <CreateBar></CreateBar>
+        <br></br>
         <CommunityPost header='Blockchain developers best practices on innovation chain' firstName='first' lastName='last'></CommunityPost>
         <br></br>
         <CommunityPost header='OnePay - Online Payment Processing App' firstName='another' lastName='name'></CommunityPost>
