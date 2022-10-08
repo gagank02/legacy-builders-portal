@@ -2,33 +2,37 @@ body{
     font-family: Arial;
 }
 
-.home-content {
+.welcome {
+    padding-left: 80px;
+    padding-right: 40px;
+}
+/* .home-content {
     position: relative;
     width: 1105px;
     height: 454px;  
     border: 1px solid black;
-}
-
+} */
+/* 
 .home-content h2{
     padding-left: 552px;
     padding-top: 227px;
-}
+} */
 
-.home-lessons {
+/* .home-lessons {
     padding: 20px;
     border: 1px solid black;
     float: left;
     height: 50%;
-}
+} */
 
-.home-progress {
+/* .home-progress {
     padding: 20px;
     position: relative;
     float: right;
     width: 1105px;
     height: 50%;  
     border: 1px solid black;
-}
+} */
 
 .parent {
     margin: 1rem;
@@ -39,6 +43,6 @@ body{
     display: inline-block;
     padding: 1rem 1rem;
     vertical-align: middle;
+    text-align: center;
   }
 
-  

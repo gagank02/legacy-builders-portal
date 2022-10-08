@@ -6,38 +6,30 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import MuiButton from './MuiButton';
+import MuiResumeProgress from './MuiResumeProgress';
 
-const bull = (
-  <Box
-    component="span"
-    sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
-  >
-    •
-  </Box>
-);
 
-export default function MuiCard({header, info, size, img}) {
+
+export default function MuiDashboard({header, info, size, img, desc}) {
   return (
     <Card sx={{ width: size}}>
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
           
         </Typography>
-        <Typography variant="h5" component="div" color="rgb(40, 68, 146)">
+        <Typography component="div" color="rgb(40, 68, 146)">
+          <h2>{header}</h2>
           
-          {header}
         </Typography>
-        <Typography sx={{  }} color="text.secondary">
+        <Typography sx={{}} color="text.secondary">
           {info}
         </Typography>
         <Typography variant="body2">
-          <img src={img} width = "90%" />
-        
+          <br/>
+          <MuiResumeProgress desc={desc} href="/webinar" />
+          
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small"></Button>
-      </CardActions>
     </Card>
   );
 }

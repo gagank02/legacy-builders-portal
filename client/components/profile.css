@@ -1,4 +1,27 @@
-.profile-header {
-    width: auto;
-    margin: auto;
+.profile .avatar{
+    margin: 1rem;
+    /* padding: 2rem 2rem; */
+    text-align: center;
+  }
+
+.profile .profile-info{
+    display: inline-block;
+    
+}
+
+.parent {
+  float:left;
+  margin: 1rem; 
+  padding: 2rem 2rem;
+  text-align: center;
+}
+.child {
+  display: inline-block; 
+  padding: 1rem 1rem;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.profile .parent h1 {
+  color:rgb(40, 68, 146);
 }

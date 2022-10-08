@@ -16,7 +16,7 @@ const bull = (
   </Box>
 );
 
-export default function MuiCard({header, info, size, img}) {
+export default function MuiNextWebinar({header, info, size, url}) {
   return (
     <Card sx={{ width: size}}>
       <CardContent>
@@ -27,11 +27,11 @@ export default function MuiCard({header, info, size, img}) {
           
           {header}
         </Typography>
-        <Typography sx={{  }} color="text.secondary">
+        <Typography sx={{ }} color="text.secondary">
           {info}
         </Typography>
         <Typography variant="body2">
-          <img src={img} width = "90%" />
+          <a href={url}>{url}</a>
         
         </Typography>
       </CardContent>

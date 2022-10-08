@@ -1,0 +1,53 @@
+.CommunityPost{
+    background-color: #324258;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+}
+
+.CommunityPost .image{
+    padding-left: 15px;
+    padding-top: 25px;
+    padding-right: 15px;
+    width: 150px;
+    height: 140;
+}
+
+.CommunityPost .info .tag{
+    background-color: gray;
+    width: 60px;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.CommunityPost .info .bottom{
+    display: flex;
+}
+
+
+
+.CommunityPost .info .bottom .comments{
+    position: absolute;
+    float: right;
+    padding-left: 1250px;
+    text-decoration: underline;
+}
+
+.CreateBar{
+    background-color: #324258;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    height: 35px;
+    width: 400px;
+    margin-left: 550px;
+}
+
+.CreateBar .button{
+    display: inline-flex;
+    padding-top: 5px;
+}
+
+.CreateBar .textField{
+    width: 300px;
+}

@@ -46,17 +46,7 @@ export default function Navbar() {
             <AppBar className={classes.header}>
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
-                        {/* <IconButton
-                            size="large"
-                            aria-label="account of current user"
-                            aria-controls="menu-appbar"
-                            onClick={handleOpenMenu}
-                            color="info"   
-                            className={classes.sidebarOpener}
-
-                        >
-                            <MenuIcon />
-                        </IconButton> */}
+                    
 
                         <Box className={classes.logoBox}>
                             <Link href="/" passHref>
@@ -94,8 +84,18 @@ export default function Navbar() {
                             </Box> */}
                             {/* <Typography sx={{ color: '#DFE0EB', fontSize: "30px", textAlign: 'center', padding: '0 15px' }}>|</Typography> */}
                             <Box className={classes.profile}>
-                                <Typography className={classes.name}>FirstName LastName</Typography>
+                            <Typography className={classes.name}>FirstName LastName</Typography>
+                            <IconButton
+                                size="large"
+                                aria-label="account of current user"
+                                aria-controls="menu-appbar"
+                                onClick={handleOpenMenu}
+                                color="info"   
+                                className={classes.sidebarOpener}
+                                href="/profile"
+                            >
                                 <Avatar>OP</Avatar>
+                            </IconButton>
                             </Box>
                         </Box>
 
