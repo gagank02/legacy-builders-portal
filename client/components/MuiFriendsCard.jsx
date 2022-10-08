@@ -20,15 +20,16 @@ export default function BasicCard() {
           <h3>Friend List</h3>
         </Typography>
         <ul style={{ }}>
-            <li>Friend #1</li>
-            <li>Friend #2</li>
-            <li>Friend #3</li>
-            <li>Friend #4</li>
-        </ul>
-      <Typography variant="body2">
         
-        <br />
-      </Typography>
+        <p> <img src = "assets/profile.webp" width = "20px" />
+               Friend #1</p>
+        <p> <img src = "assets/profile.webp" width = "20px" />
+               Friend #2</p>
+        <p> <img src = "assets/profile.webp" width = "20px" />
+               Friend #3</p>
+        <p> <img src = "assets/profile.webp" width = "20px" />
+               Friend #4</p>
+        </ul>
     </CardContent>
     <CardActions>
       <Button size="small"></Button>

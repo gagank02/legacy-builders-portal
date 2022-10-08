@@ -11,7 +11,7 @@ import { blue } from '@mui/material/colors';
 
 export default function BasicCard({userName, email, location, courses}) {
   return (
-    <Card sx={{ width: "35vw"}}>
+    <Card sx={{ width: "65vw"}}>
     <CardContent>
         <h3>First Last</h3>
           Profile Information

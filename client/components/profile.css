@@ -21,3 +21,7 @@
   vertical-align: middle;
   text-align: left;
 }
+
+.profile .parent h1 {
+  color:rgb(40, 68, 146);
+}

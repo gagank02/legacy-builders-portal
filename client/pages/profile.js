@@ -11,7 +11,9 @@ const Profile = () => {
         <>
             <Navbar />
             <div className="profile">
+                
                 <div className="parent">
+                <h1 color = "rgb(40, 68, 146)"> Profile </h1>
                     <div className = "child">
                         <div className='avatar'>
                             <MuiAvatar sx={{}} first="First" last="Last"></MuiAvatar>
@@ -21,8 +23,6 @@ const Profile = () => {
                         <MuiProfileTable userName="firstlast123" email="first.last@gmail.com" location='Chicago, Illinois' ></MuiProfileTable>
                     </div>
                 </div>
-                <br></br>
-                <div className='profile-info'>
                     
                 <div className="parent">
                     <div className = "child">
@@ -33,8 +33,7 @@ const Profile = () => {
                         </div>
                     </div>
                 </div>
-                
-            </div>
+              
         </>
      );
 }
