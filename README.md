@@ -7,6 +7,9 @@ How can help [Refined and Refreshed](https://www.refinedrefreshedinc.org/) expan
  - Next.js
  - Node
 
+## ERD
+![ERD of API](https://github.com/cfgchicago22/team-2/blob/main/ERD%20API.png)
+
 
 # Setup
  1. To initialize database, use api/.env.template to create your own .env file.
