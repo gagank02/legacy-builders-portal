@@ -11,13 +11,19 @@ const Profile = () => {
         <>
             <Navbar />
             <div className="profile">
-                <div className='avatar'>
-                    <MuiAvatar sx={{}} first="First" last="Last"></MuiAvatar>
+                <div className="parent">
+                    <div className = "child">
+                        <div className='avatar'>
+                            <MuiAvatar sx={{}} first="First" last="Last"></MuiAvatar>
+                        </div>
+                    </div>
+                    <div className = "child" >
+                        <MuiProfileTable userName="firstlast123" email="first.last@gmail.com" location='Chicago, Illinois' ></MuiProfileTable>
+                    </div>
                 </div>
                 <br></br>
                 <div className='profile-info'>
                     <div>
-                        <MuiProfileTable userName="Matthew1234" email="mwhyte3602@gmail.com" location='Chicago, Illinois' courses='Courses'></MuiProfileTable>
                     </div>
                     <br></br>
                     <div>

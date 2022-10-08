@@ -11,27 +11,21 @@ import { blue } from '@mui/material/colors';
 
 export default function BasicCard({userName, email, location, courses}) {
   return (
-    <Card sx={{ width: "45vw"}}>
+    <Card sx={{ width: "35vw"}}>
     <CardContent>
-      <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-        
-      </Typography>
-      <Typography variant="h5" component="div">
+        <h3>First Last</h3>
           Profile Information
-        </Typography>
+          {/* <p>Username:</p><p>{userName}</p> */}
+          
+          
         <ul style={{ }}>
             <li>Username: {userName}</li>
             <li>Email: {email}</li>
             <li>Location: {location}</li>
-            <li>Courses: {courses}</li>
         </ul>
-      <Typography variant="body2">
-        
-        <br />
-      </Typography>
     </CardContent>
     <CardActions>
-      <Button size="small"></Button>
+      <Button size="small">Edit</Button>
     </CardActions>
   </Card>
   );

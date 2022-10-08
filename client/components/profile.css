@@ -1,10 +1,23 @@
 .profile .avatar{
     margin: 1rem;
-    padding: 2rem 2rem;
+    /* padding: 2rem 2rem; */
     text-align: center;
   }
 
 .profile .profile-info{
     display: inline-block;
     
+}
+
+.parent {
+  float:left;
+  /* margin: 1rem; */
+  /* padding: 2rem 2rem; */
+  /* text-align: center; */
+}
+.child {
+  /* display: inline-block; */
+  /* padding: 1rem 1rem; */
+  /* vertical-align: middle; */
+  text-align: left;
 }
