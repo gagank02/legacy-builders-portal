@@ -4,12 +4,14 @@ const morgan = require("morgan");
 const contentsRoutes = require("./routes/contents");
 const { NotFoundError } = require("./utils/errors.js");
 const authRoutes = require("./routes/auth");
+const security = require("./middleware/security");
 const app = express();
 
 // middleware
 app.use(cors({ origin: "*" }));
 app.use(express.json());
 app.use(morgan("tiny"));
+app.use(security.extractUserFromJwt)
 
 app.get("/", function (req, res) {
     return res.status(200).json({ ping: "pong" });
