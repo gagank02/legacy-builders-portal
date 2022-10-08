@@ -15,6 +15,19 @@ class User {
         return user;
     }
 
+    static async fetchUserByEmail(email) {
+        if (!email) {
+            throw new BadRequestError("No email provided");
+        }
+        const query = `SELECT * FROM users WHERE email = $1`;
+        const result = await db.query(query, [email.toLowerCase()]);
+
+        const user = result.rows[0];
+
+        return user;
+    }
+
+
     static async makePublicUser(user) {
         return {
             id: user.id,
