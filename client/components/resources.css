@@ -16,3 +16,21 @@
     padding-left: 50px;
     gap: 5px;
 }
+
+@media screen and (max-width: 420px) {
+    .resources h3{
+        width: 70%;
+        margin-left: 15%;
+    }
+
+    .resources .cards{
+        padding-left: 10px;
+        display: inline;
+        float: center;
+    }
+
+    .css-1gp1lk7-MuiPaper-root-MuiCard-root {
+        width: 95vw !important;
+    }
+
+}
