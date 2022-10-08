@@ -24,10 +24,11 @@ VALUES (
 );
 
 
-INSERT INTO comments(page_id, user_id)
+INSERT INTO comments(page_id, user_id, comment)
 VALUES (
     1,
-    1
+    1,
+    "test comment"
 );
 
 INSERT INTO quizzes(courses_id)

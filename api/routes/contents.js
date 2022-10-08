@@ -45,4 +45,4 @@ router.get('/comments', async (req, res) => {
 })
 
 
-module.exports = contentRoutes;
+module.exports = router;

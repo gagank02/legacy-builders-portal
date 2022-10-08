@@ -6,7 +6,7 @@ CREATE TABLE users(
     last_name               TEXT NOT NULL,
     email                   TEXT NOT NULL UNIQUE CHECK(POSITION('@' IN email) > 1),
     created_at              TIMESTAMP NOT NULL DEFAULT NOW(),
-    location                TEXT NOT NULL
+    location                TEXT
 );
 
 CREATE TABLE courses( 
@@ -32,7 +32,8 @@ CREATE TABLE comments(
     id                      SERIAL PRIMARY KEY,
     page_id                 INTEGER NOT NULL REFERENCES pages(id),
     user_id                 INTEGER NOT NULL REFERENCES users(id),
-    date                    TIMESTAMP NOT NULL DEFAULT NOW()
+    date                    TIMESTAMP NOT NULL DEFAULT NOW(),
+    comment                 TEXT NOT NULL
 );
 
 CREATE TABLE quizzes (
