@@ -36,9 +36,13 @@ router.get("/quizzes", security.requireAuthenticatedUser, async (req, res) => {
 });
 
 router.get("/pages", security.requireAuthenticatedUser, async (req, res) => {
-    var page = await Pages.getPage(req.body);
-    console.log(page);
-    return res.status(200).json({ token, page });
+    try {
+        var page = await Pages.getPage(req.body);
+        console.log(page);
+        return res.status(200).json({ token, page });
+    } catch (error) {
+        next(error);
+    }
 });
 
 router.post("/comments/commentsonpage", async (req, res, next) => {
@@ -77,32 +81,44 @@ router.post(
 );
 
 
-router.put('/progress', async (req, res) => {
-    req.decoded = validateToken(req.body.token);
-    const progress = await Courses .setProgress(req.body);
-    console.log(progress);
-    return res.status(200).json({token, progress});
+router.put('/progress', security.requireAuthenticatedUser, async (req, res, next) => {
+    try {
+        const progress = await Courses.setProgress(req.body);
+        console.log(progress);
+        return res.status(200).json({token, progress});
+    } catch (error) {
+        next(error);
+    }    
 });
 
-router.put('/location', async (req, res) => {
-    req.decoded = validateToken(req.body.token);
-    const location = await Users.setLocation(req.body);
-    console.log(progress);
-    return res.status(200).json({token, location});
+router.put('/location', security.requireAuthenticatedUser, async (req, res, next) => {
+    try {
+        const location = await Users.setLocation(req.body);
+        console.log(progress);
+        return res.status(200).json({token, location});
+    } catch (error) {
+        next(error);
+    }    
 });
 
-router.post('/location', async (req, res) => {
-    req.decoded = validateToken(req.body.token);
-    const location = await Users.setLocation(req.body);
-    console.log(progress);
-    return res.status(200).json({token, location});
+router.post('/location', security.requireAuthenticatedUser, async (req, res, next) => {
+    try {
+        const location = await Users.setLocation(req.body);
+        console.log(progress);
+        return res.status(200).json({token, location});
+    } catch (error) {
+        next(error);
+    }    
 });
 
-router.post('/quiz-try', async (req, res) => {
-    req.decoded = validateToken(req.body.token);
-    const quizAttempt = await Quizzes.quizTry(req.body);
-    console.log(progress);
-    return res.status(200).json({token, quizAttempt});
+router.post('/quiz-try', security.requireAuthenticatedUser, async (req, res, next) => {
+    try {
+        const quizAttempt = await Quizzes.quizTry(req.body);
+        console.log(progress);
+        return res.status(200).json({token, quizAttempt});
+    } catch (error) {
+        next(error);
+    }    
 });
 
 module.exports = router;
