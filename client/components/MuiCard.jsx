@@ -15,9 +15,9 @@ const bull = (
   </Box>
 );
 
-export default function MuiCard({header, percent}) {
+export default function MuiCard({header, info, size}) {
   return (
-    <Card sx={{ width: "30vw"}}>
+    <Card sx={{ width: size}}>
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
           
@@ -26,7 +26,7 @@ export default function MuiCard({header, percent}) {
           {header}
         </Typography>
         <Typography sx={{ mb: 1.5 }} color="text.secondary">
-          {percent}
+          {info}
         </Typography>
         <Typography variant="body2">
           

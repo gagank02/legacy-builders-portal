@@ -1,7 +1,12 @@
 body{
     font-family: Arial;
+    padding-top: 150px;
 }
 
+.welcome {
+    padding-left: 80px;
+    padding-right: 40px;
+}
 .home-content {
     position: relative;
     width: 1105px;

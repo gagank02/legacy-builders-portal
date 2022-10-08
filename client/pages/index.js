@@ -10,17 +10,18 @@ export default function Home() {
   return (
       <>
         <Navbar />
-        <div className='home-content'>
-          <h2>Content</h2>
+        <div className = 'welcome'>
+          <MuiCard header = "Welcome to Legacy Builders!" info = "Here is your dashboard." size = "87vw"/>
         </div>
+        
         <div className = 'parent'>
           <div className = 'child'>
             <MuiTable/>
           </div>
           <div className = 'child'>
-            <MuiCard header = "Your Progress" percent = "70%" />
+            <MuiCard header = "Your Progress" info = "70%" size = "30vw" />
             <br></br>
-            <MuiCard header = "Your Next Webinar" percent = "https://urllink.com" />
+            <MuiCard header = "Your Next Webinar" info = "https://urllink.com" />
           </div>
         </div>
           
