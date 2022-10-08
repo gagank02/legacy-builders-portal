@@ -46,17 +46,7 @@ export default function Navbar() {
             <AppBar className={classes.header}>
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
-                        {/* <IconButton
-                            size="large"
-                            aria-label="account of current user"
-                            aria-controls="menu-appbar"
-                            onClick={handleOpenMenu}
-                            color="info"   
-                            className={classes.sidebarOpener}
-
-                        >
-                            <MenuIcon />
-                        </IconButton> */}
+                    
 
                         <Box className={classes.logoBox}>
                             <Link href="/" passHref>
