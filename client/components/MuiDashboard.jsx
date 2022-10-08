@@ -18,16 +18,17 @@ export default function MuiDashboard({header, info, size, img, desc}) {
           
         </Typography>
         <Typography component="div" color="blue">
-          <h2>{header}</h2>
+          <h1 style={{textAlign: "center", color: 'black'}}>{header}</h1>
           
         </Typography>
-        <Typography sx={{}} color="text.secondary">
+        <Typography sx={{textAlign: "center"}} color="text.secondary">
           {info}
         </Typography>
         <Typography variant="body2">
           <br/>
+          <div style={{justifyContent: 'center', display: 'flex'}}>
           <MuiResumeProgress desc={desc} href="/webinar" />
-          
+          </div>
         </Typography>
       </CardContent>
     </Card>
