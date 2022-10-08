@@ -1,7 +1,9 @@
 import { useState } from "react";
-import MuiButton from "../components/MuiButton";
+import MuiSubmitButton from "../components/MuiSubmitButton";
+import MuiSignin from "../components/MuiSignin";
 
 const SignIn = () => {
+    
     const [userName, setUserName] = useState('');
     const [password, setPassword] = useState('');
     
@@ -19,6 +21,7 @@ const SignIn = () => {
         });
     }
 
+
     return ( 
         <>
         <div className="signOn">
@@ -26,7 +29,10 @@ const SignIn = () => {
             <div className="image">
                 <img src="/assets/raf_logo.png"></img>
             </div>
-            <div className="form">
+            <br></br>
+            <p>Please sign in using your username and password below.</p>
+        
+        <div className="form">
                 <form>
                     <div className="input-container">
                         <label>Username: </label>
@@ -41,10 +47,10 @@ const SignIn = () => {
                     <br></br>
                     </form>
                 <div className = "submitButton">
-                    <MuiButton desc="Submit"></MuiButton>
+                    <MuiSubmitButton desc="Submit"/>
                 </div>
             </div>
-        </div>
+            </div>
         </>
      );
 }
